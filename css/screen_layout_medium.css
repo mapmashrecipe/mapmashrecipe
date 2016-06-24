@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/* Layout Medium Screens */
+
+header { height:100px; background: url(../images/headerB_medium.jpg) no-repeat 90% 0px;}
+
+header a.logo {
+	width: 70px;
+	height: 70px;
+	top: 17px;
+	right: 17px;
+	background-image: url(../images/mmr_logo.png);
+}
+#headTitle{
+	font-size:2.2em;
+	padding-top:40px;
+}
+nav { top: 100px; }
+nav a { margin-right: 20px;  position: relative; float: right;}
+
+.promo_container { padding: 0px 20px 15px 20px;}
+
+
+.promo_container .promo {
+	width: 32%;
+	float: left;
+	background-position: 0px 3px;
+}
+.promo_container .promo  .content{ padding: 90px 30px 0px 0px;}
+
+.promo.one { background-image: url(../images/mmr_maps80.jpg);}
+.promo.two { background-image: url(../images/mmr_tools80.jpg);}
+.promo.three { background-image: url(../images/mmr_mashup80.jpg);}
+
+.project_container { padding:0px; }
+.project h3 {
+	font-size: 1 em;
+}
+
+.project_container .project { 
+	width: auto;
+	float: none;
+	padding: 10px 0px 0px 0px;
+	background-position: left center;
+	border-top: 1px solid #ccc;	
+	margin: 5px;
+	min-height: 100px;
+	font-size: 1em;
+}
+.project_container .project .content { padding: 0px 20px 5px 90px;}
+
+.project.three { background: url(../images/pdxtransitSmall.jpg) no-repeat;}
+.project.four { background: url(../images/rcc_ss1small.jpg) no-repeat;}
+.project.five { background: url(../images/sdk_ss_small.jpg) no-repeat;}
+.project.six { background: url(../images/iowacitybus_ss1small.jpg) no-repeat;}
+.project.seven { background: url(../images/prj_buildout_small.jpg) no-repeat;}
+.project.eight { background: url(../images/prj_fcestatus_small.jpg) no-repeat;}
+.project.nine { background: url(../images/prj_ianature_small.jpg) no-repeat;}
+.project.ten { background: url(../images/g_nf_small.jpg) no-repeat;}
+
+body { background-image: none;}
+
+
+

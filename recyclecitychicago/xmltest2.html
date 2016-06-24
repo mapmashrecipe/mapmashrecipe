@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recycle Chicago</title>
+<script type="text/javascript" src="downloadxml.js"></script>
+<script type="text/javascript">
+function initialize() {
+		alert("working");
+	  downloadUrl("phptest1.php", function(data) {	    
+		var xmlDoc = xmlParse(data);
+		var records = xmlDoc.getElementsByTagName("geog");
+		var charthtml = "<p>";
+		
+		for (var i = 0; i < records.length; i++) {
+		  var rec = records[i];	  
+		  var id = rec.getAttribute("id");
+		  var name = rec.getAttribute("name");
+		  alert (id + ", " + name);
+		  charthtml += "id: "  + id + " name: " + name + "<br />";
+		  charthtml += charthtml;
+		  }	
+
+		    
+
+	
+		  charthtml += "</p>";
+				
+		document.getElementById("test").innerHTML = charthtml;
+	});
+	/*
+	  downloadUrl("http://www.jihoonson.com/CApps/RecycleAddressData2.php", function(data) {
+	    
+		var xmlDoc = xmlParse(data);
+		var records = xmlDoc.getElementsByTagName("pt");
+
+		for (var i = 0; i < records.length; i++) {
+		  var rec = records[i];	  
+		  var id = rec.getAttribute("ID");
+		  var name = rec.getAttribute("Name");
+		  var type = rec.getAttribute("Type");
+		  var addr = rec.getAttribute("Address");
+		  var lat = rec.getAttribute("Lat");
+		  var lng = rec.getAttribute("Lng");
+		  var phone = rec.getAttribute("Phone");
+		  var hrs = rec.getAttribute("Hours");
+		  var cbrd = rec.getAttribute("Cardboard");
+		  var gp = rec.getAttribute("GlassPlastic");
+		  var met = rec.getAttribute("Metals");
+		
+		
+          //define two information window htmls for two tabs		
+		  var infoRecycle1 = "<div class='phoneytext'><ul><h3>" + name + "</h3><li>"
+			+ "<b>Type: </b>" + type + "</li><li>"
+			+ "<b>Address: </b>" + addr +"</li><li>"
+			+ "<b>Phone: </b>" + phone +"</li><li>"
+			+ "<b>Hours: </b>" + hrs +"</li></ul></div>";
+		  var infoRecycle2 = "<div class='phoneytext'><ul><li>"
+			+ "<b>Cardboard: </b>" + cbrd + "</li><li>"
+			+ "<b>Glass&Plastic: </b>" + gp +"</li><li>"
+			+ "<b>Metals: </b>" + met +"</li></ul></div>";
+			
+		  document.getElementById("test").innerHTML = infoRecycle1;
+	    	  
+		}
+
+	  });*/
+	}
+	</script>
+  </head>
+  <body onload="initialize()">
+	<div>
+		<span id="test"></span>
+	</div>
+	<div><p>this is a test.</p></div>
+  </body>
+</html>
+	

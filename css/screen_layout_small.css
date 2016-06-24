@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/* Layout Small Screens */
+
+header { height: 60px; background: url(../images/headerB_small.jpg) no-repeat right 0px;}
+
+header a.logo {
+	width: 60px;
+	height: 60px;
+	top: 6px;
+	right: 6px;
+	background-image: url(../images/mmr_logo_small.png);
+}
+#headTitle{
+	font-size:1.5em;
+	padding-top:18px;
+}
+article { padding:20px 20px 10px 20px;}
+
+nav { 
+	position: static;
+	padding: 10px 0px 10px 0px;
+	background-color: #a6430a;
+}
+
+nav a {
+	color: #a6abc5;
+	float: none;
+	display: block;
+	margin: 15px;
+	padding: 9px;
+	border: 1px solid #a6abc5;
+	background: url(../images/mobile_link_arrow.png) no-repeat right center;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+nav a:hover { color: #fff; background-color: rgba(255,255,255,.15);}
+
+.promo_container { padding:0px; }
+
+.promo_container .promo { 
+	width: auto;
+	float: none;
+	padding: 10px 0px 0px 0px;
+	background-position: 10px 13px;
+	border-top: 1px solid #ccc;	
+}
+.promo_container .promo .content { padding: 0px 20px 5px 100px;}
+
+.promo.one { background-image: url(../images/mmr_maps80.jpg);}
+.promo.two { background-image: url(../images/mmr_tools80.jpg);}
+.promo.three { background-image: url(../images/mmr_mashup80.jpg);}
+
+.project_container { padding:0px; }
+
+.project_container .project { 
+	width: auto;
+	float: none;
+	padding: 10px 0px 0px 0px;
+	background-position: 10px 13px;
+	border-top: 1px solid #ccc;	
+	margin: 5px;
+	min-height: 210px;
+background-image: none; 
+background-color: transparent; 
+}
+.project_container .project .content { padding: 0px 20px 5px 0px;  }
+
+
+footer { border-top: 1px solid #a6abc5;}
+
+body { background-image: none;}

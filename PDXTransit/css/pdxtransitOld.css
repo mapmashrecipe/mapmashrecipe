@@ -1,0 +1,55 @@
+	body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		font-family: 'Cabin Condensed', sans-serif;
+	}
+
+	#map_wrap{top:40px;left:0px;right:0px;bottom:0px;
+		position:absolute;
+		clear:both;
+		width:100%;
+	}
+	#map_canvas{
+		width:100%;
+		height:100%;
+	}
+
+
+	.leaflet-right .leaflet-control {
+		width: 250px;
+	}
+	.helpCallout{
+		padding:5px;
+		border: 0.5px solid black;
+		background-color: white;
+		display: none;
+		box-shadow: 10px 10px 5px #888888;
+		border-collapse: collapse;
+		border-spacing: 0px;
+	}
+	.leaflet-control-geosearch{
+		width:400px;
+	}
+	.container{
+		padding-left: 0px;
+		padding-right: 0px;
+		margin-left: 0px;
+		margin-right: 15px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		width:auto;
+	}
+	.container > .navbar-header{
+		margin-left: 0px;
+	}
+	.navbar-toggle {
+		padding:1px 3px;
+		margin-top: 10px;
+		margin-bottom: 2px;
+	}
+	.input-group-btn{
+		float:left;
+		width:auto;
+	}

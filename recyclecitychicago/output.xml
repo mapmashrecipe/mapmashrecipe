@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <Pts>
+        <ID>1</ID>
+        <Lat>42.005161</Lat>
+        <Lng>-87.680962</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Golf Course Lot at Warren Park</NAME>
+        <Address>2045 W. Pratt Blvd.</Address>
+        <FullAddress>2045 W. Pratt Blvd., Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours>7 days a week during daylight hours</Hours>
+        <Cardboard>Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard>
+        <GlassPlastic>Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic>
+        <Metals>Aluminum cans, foil  pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>2</ID>
+        <Lat>41.997387</Lat>
+        <Lng>-87.786591</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Caldwell Woods Forest Preserve</NAME>
+        <Address>6358 W. Devon Ave</Address>
+        <FullAddress>6358 W. Devon Ave, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>3</ID>
+        <Lat>41.999207</Lat>
+        <Lng>-87.675018</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Far North Side</NAME>
+        <Address>6441 N. Ravenswood</Address>
+        <FullAddress>6441 N. Ravenswood, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>4</ID>
+        <Lat>41.972435</Lat>
+        <Lng>-87.846588</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Chevailier Woods Forest Preserve</NAME>
+        <Address>5530 N. East River Road</Address>
+        <FullAddress>5530 N. East River Road, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>5</ID>
+        <Lat>41.953579</Lat>
+        <Lng>-87.73365</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Schiller Woods East Forest Preserve</NAME>
+        <Address>8700 W. Irving Park Road</Address>
+        <FullAddress>8700 W. Irving Park Road, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>6</ID>
+        <Lat>41.952854</Lat>
+        <Lng>-87.790878</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Portage Park Neighborhood</NAME>
+        <Address>4243 N. Neenah</Address>
+        <FullAddress>4243 N. Neenah, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>7</ID>
+        <Lat>41.965641</Lat>
+        <Lng>-87.727928</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>17th District Police Station</NAME>
+        <Address>4649 N. Pulaski</Address>
+        <FullAddress>4649 N. Pulaski, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>8</ID>
+        <Lat>41.957695</Lat>
+        <Lng>-87.698311</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Horner Park</NAME>
+        <Address>4201 N. California</Address>
+        <FullAddress>4201 N. California, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>9</ID>
+        <Lat>41.931267</Lat>
+        <Lng>-87.791786</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>City Service Yard</NAME>
+        <Address>2817 N. Natoma Avenue</Address>
+        <FullAddress>2817 N. Natoma Avenue, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>10</ID>
+        <Lat>41.916065</Lat>
+        <Lng>-87.742386</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Hermosa Community</NAME>
+        <Address>4619 W. Homer</Address>
+        <FullAddress>4619 W. Homer, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>11</ID>
+        <Lat>41.914204</Lat>
+        <Lng>-87.717857</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>City Service Yard</NAME>
+        <Address>1817 N. Monticello Avenue</Address>
+        <FullAddress>1817 N. Monticello Avenue, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>12</ID>
+        <Lat>41.917866</Lat>
+        <Lng>-87.7229</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Mozart Park</NAME>
+        <Address>2036 N. Avers</Address>
+        <FullAddress>2036 N. Avers, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>13</ID>
+        <Lat>41.926804</Lat>
+        <Lng>-87.635139</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Notebaert Nature Museum</NAME>
+        <Address>2430 N. Cannon Drive</Address>
+        <FullAddress>2430 N. Cannon Drive, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>14</ID>
+        <Lat>41.924126</Lat>
+        <Lng>-87.668999</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>City Facility</NAME>
+        <Address>1633 W. Medill Ave.</Address>
+        <FullAddress>1633 W. Medill Ave., Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>15</ID>
+        <Lat>41.910835</Lat>
+        <Lng>-87.655388</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Household Chemicals and Computer Recycling Facility</NAME>
+        <Address>1150 N. North Branch</Address>
+        <FullAddress>1150 N. North Branch, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>16</ID>
+        <Lat>41.850388</Lat>
+        <Lng>-87.674812</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Old 10th District Police Station</NAME>
+        <Address>1952 W. 23rd St.</Address>
+        <FullAddress>1952 W. 23rd St., Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>17</ID>
+        <Lat>41.889339</Lat>
+        <Lng>-87.701447</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Chicago Center for Green Technology</NAME>
+        <Address>445 N. Sacramento</Address>
+        <FullAddress>445 N. Sacramento, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>18</ID>
+        <Lat>41.874802</Lat>
+        <Lng>-87.76915</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Columbus Park</NAME>
+        <Address>400 S. Golf�</Address>
+        <FullAddress>400 S. Golf�, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>19</ID>
+        <Lat>41.882118</Lat>
+        <Lng>-87.666115</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>West Loop</NAME>
+        <Address>1519 W. Warren Blvd.</Address>
+        <FullAddress>1519 W. Warren Blvd., Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>20</ID>
+        <Lat>41.856621</Lat>
+        <Lng>-87.724754</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>North Lawndale</NAME>
+        <Address>1817 S. Pulaski</Address>
+        <FullAddress>1817 S. Pulaski, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>21</ID>
+        <Lat>41.864292</Lat>
+        <Lng>-87.700157</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Douglas Park</NAME>
+        <Address>1359 S. Thompson Dr.</Address>
+        <FullAddress>1359 S. Thompson Dr., Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>22</ID>
+        <Lat>41.858269</Lat>
+        <Lng>-87.630257</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Near South</NAME>
+        <Address>1758 S. Clark</Address>
+        <FullAddress>1758 S. Clark, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>23</ID>
+        <Lat>41.831539</Lat>
+        <Lng>-87.718254</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>City Facility</NAME>
+        <Address>3757 W. 34th St.</Address>
+        <FullAddress>3757 W. 34th St., Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>24</ID>
+        <Lat>41.824608</Lat>
+        <Lng>-87.626442</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Old Attucks School</NAME>
+        <Address>3850 S. State St.</Address>
+        <FullAddress>3850 S. State St., Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>25</ID>
+        <Lat>41.823242</Lat>
+        <Lng>-87.660461</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>City Facility Campus</NAME>
+        <Address>1424 W. Pershing</Address>
+        <FullAddress>1424 W. Pershing, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>26</ID>
+        <Lat>41.79385</Lat>
+        <Lng>-87.684418</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Gage Park</NAME>
+        <Address>2411 W. 55th</Address>
+        <FullAddress>2411 W. 55th, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>27</ID>
+        <Lat>41.794132</Lat>
+        <Lng>-87.659805</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Sherman Park</NAME>
+        <Address>1300 W. Garfield Blvd</Address>
+        <FullAddress>1300 W. Garfield Blvd, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>28</ID>
+        <Lat>41.790497</Lat>
+        <Lng>-87.614944</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Washington Park</NAME>
+        <Address>5560 Russell Dr</Address>
+        <FullAddress>5560 Russell Dr, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>29</ID>
+        <Lat>41.770954</Lat>
+        <Lng>-87.702972</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Marquette Park</NAME>
+        <Address>6734 S. Kedzie</Address>
+        <FullAddress>6734 S. Kedzie, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>30</ID>
+        <Lat>41.775936</Lat>
+        <Lng>-87.654404</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Ogden Park</NAME>
+        <Address>6500 S. Racine</Address>
+        <FullAddress>6500 S. Racine, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>31</ID>
+        <Lat>41.751884</Lat>
+        <Lng>-87.653648</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Auburn Gresham</NAME>
+        <Address>7811 S. Racine</Address>
+        <FullAddress>7811 S. Racine, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>32</ID>
+        <Lat>41.757927</Lat>
+        <Lng>-87.548203</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Rainbow Park</NAME>
+        <Address>3111 E. 77th Street</Address>
+        <FullAddress>3111 E. 77th Street, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>33</ID>
+        <Lat>41.742855</Lat>
+        <Lng>-87.681145</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Dan Ryan Woods Forest Preserve</NAME>
+        <Address>2300 W. 83rd Street</Address>
+        <FullAddress>2300 W. 83rd Street, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>34</ID>
+        <Lat>41.71743</Lat>
+        <Lng>-87.537338</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Calumet Park Beach</NAME>
+        <Address>9807 S. Avenue G</Address>
+        <FullAddress>9807 S. Avenue G, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>35</ID>
+        <Lat>41.707512</Lat>
+        <Lng>-87.603706</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>Gately Stadium</NAME>
+        <Address>810 E. 103rd St.</Address>
+        <FullAddress>810 E. 103rd St., Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>36</ID>
+        <Lat>41.682377</Lat>
+        <Lng>-87.617905</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>West Pullman</NAME>
+        <Address>11615 S. Indiana</Address>
+        <FullAddress>11615 S. Indiana, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>37</ID>
+        <Lat>41.67598</Lat>
+        <Lng>-87.642982</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>City Service Yard</NAME>
+        <Address>829 W. 120th St.</Address>
+        <FullAddress>829 W. 120th St., Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>38</ID>
+        <Lat>41.744816</Lat>
+        <Lng>-87.54789</Lng>
+        <TYPE>CityOfChicago</TYPE>
+        <NAME>William W. Powers Recreation Area</NAME>
+        <Address>12949 S. Avenue O</Address>
+        <FullAddress>12949 S. Avenue O, Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>39</ID>
+        <Lat>41.801903</Lat>
+        <Lng>-87.630661</Lng>
+        <TYPE>Pharmaceuticals</TYPE>
+        <NAME>Dispose of Pharmaceuticals Area 1</NAME>
+        <Address>5101 S. Wentworth Ave.</Address>
+        <FullAddress>5101 S. Wentworth Ave., Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>40</ID>
+        <Lat>41.692833</Lat>
+        <Lng>-87.604965</Lng>
+        <TYPE>Pharmaceuticals</TYPE>
+        <NAME>Dispose of Pharmaceuticals Area 2</NAME>
+        <Address>727 E. 111th St.</Address>
+        <FullAddress>727 E. 111th St., Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>41</ID>
+        <Lat>41.939487</Lat>
+        <Lng>-87.689339</Lng>
+        <TYPE>Pharmaceuticals</TYPE>
+        <NAME>Dispose of Pharmaceuticals Area 3</NAME>
+        <Address>2452 W. Belmont Ave.</Address>
+        <FullAddress>2452 W. Belmont Ave., Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>42</ID>
+        <Lat>41.873657</Lat>
+        <Lng>-87.70536</Lng>
+        <TYPE>Pharmaceuticals</TYPE>
+        <NAME>Dispose of Pharmaceuticals Area 4</NAME>
+        <Address>3151 W. Harrison St.</Address>
+        <FullAddress>3151 W. Harrison St., Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>43</ID>
+        <Lat>41.918625</Lat>
+        <Lng>-87.765297</Lng>
+        <TYPE>Pharmaceuticals</TYPE>
+        <NAME>Dispose of Pharmaceuticals Area 5</NAME>
+        <Address>5555 W. Grand Ave.</Address>
+        <FullAddress>5555 W. Grand Ave., Chicago, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >7 days a week during daylight hours</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Cereal boxes,Paper bags, Milk, Juice cartons</Cardboard >
+        <GlassPlastic >Glass bottles, Plastic bottles and containers, #1,#2,#3,#4,#5,#7 Plastic, no #6 Plastic</GlassPlastic >
+        <Metals>Aluminum cans, foil and pie tins, Tin or steel cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>44</ID>
+        <Lat>41.88561</Lat>
+        <Lng>-87.5691299</Lng>
+        <TYPE>Private</TYPE>
+        <NAME>Huron Paper Stocks Company </NAME>
+        <Address>2545 W Fulton</Address>
+        <FullAddress>2545 W Fulton, Chicago, IL</FullAddress>
+        <Phone>312-829-7456</Phone>
+        <Hours >M-F 7-2 30</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Chipboard</Cardboard >
+        <GlassPlastic></GlassPlastic >
+        <Metals> </Metals>
+    </Pts>
+    <Pts>
+        <ID>45</ID>
+        <Lat>41.985743</Lat>
+        <Lng>-87.722271</Lng>
+        <TYPE>Private</TYPE>
+        <NAME>North Park Village Resource Center </NAME>
+        <Address>5801 N. Pulaski</Address>
+        <FullAddress>5801 N. Pulaski, Chicago, IL</FullAddress>
+        <Phone>773-821-1351</Phone>
+        <Hours >M-Su 9-5</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Phone Books, Magazines, Chipboard</Cardboard >
+        <GlassPlastic >Glass Bottles-Clear and Colored, #1 Plastic, #2 Plastic</GlassPlastic >
+        <Metals>Aluminum Cans, Aluminum Foil, Tin Cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>46</ID>
+        <Lat>41.94684</Lat>
+        <Lng>-87.740346</Lng>
+        <TYPE>Private</TYPE>
+        <NAME>Northwest Paper Company </NAME>
+        <Address>4519 W Patterson</Address>
+        <FullAddress>4519 W Patterson, Chicago, IL</FullAddress>
+        <Phone>773-545-7560</Phone>
+        <Hours >M-F 5 30 -1 30</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Magazines, Chipboard</Cardboard >
+        <GlassPlastic></GlassPlastic >
+        <Metals>Aluminum Cans, Steel Cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>47</ID>
+        <Lat>41.905724</Lat>
+        <Lng>-87.736739</Lng>
+        <TYPE>Private</TYPE>
+        <NAME>Recycle Plus </NAME>
+        <Address>1334 N. Kostner</Address>
+        <FullAddress>1334 N. Kostner, Chicago, IL</FullAddress>
+        <Phone>773-761-5937</Phone>
+        <Hours >M-Th 8:30-3:30 F 8:30-Noon</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Magazines, Chipboard</Cardboard >
+        <GlassPlastic >Glass Bottles-Clear and Colored</GlassPlastic >
+        <Metals>Aluminum Cans, Aluminum Foil, Tin Cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>48</ID>
+        <Lat>41.805162</Lat>
+        <Lng>-87.705949</Lng>
+        <TYPE>Private</TYPE>
+        <NAME>Recycling Services </NAME>
+        <Address>3301 W 48th Place</Address>
+        <FullAddress>3301 W 48th Place, Chicago, IL</FullAddress>
+        <Phone>773-247-2070</Phone>
+        <Hours >M-F 7AM - 10PM</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Magazines, Chipboard</Cardboard >
+        <GlassPlastic ></GlassPlastic >
+        <Metals> </Metals>
+    </Pts>
+    <Pts>
+        <ID>49</ID>
+        <Lat>41.767999</Lat>
+        <Lng>-87.593031</Lng>
+        <TYPE>Private</TYPE>
+        <NAME>Resource Center-Railyard  </NAME>
+        <Address>1325 E 70th St.</Address>
+        <FullAddress>1325 E 70th St., Chicago, IL</FullAddress>
+        <Phone>773-493-1470</Phone>
+        <Hours >M-Su 9-3</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Magazines, Chipboard</Cardboard >
+        <GlassPlastic >Glass Bottles-Clear and Colored</GlassPlastic >
+        <Metals>Aluminum Cans, Aluminum Foil, Tin Cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>50</ID>
+        <Lat>41.929184</Lat>
+        <Lng>-87.654255</Lng>
+        <TYPE>Private</TYPE>
+        <NAME>Resource Center-Wrightwood  </NAME>
+        <Address>2600 N Lincoln</Address>
+        <FullAddress>2600 N Lincoln, Chicago, IL</FullAddress>
+        <Phone>773-821-1351</Phone>
+        <Hours >M-Su 7-7</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Magazines, Chipboard</Cardboard >
+        <GlassPlastic >Glass Bottles-Clear and Colored</GlassPlastic >
+        <Metals>Aluminum Cans, Aluminum Foil, Tin Cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>51</ID>
+        <Lat>41.693006</Lat>
+        <Lng>-87.606684</Lng>
+        <TYPE>Private</TYPE>
+        <NAME>Smurfit Recycling </NAME>
+        <Address>626 E 111th St</Address>
+        <FullAddress>626 E 111th St, Chicago, IL</FullAddress>
+        <Phone>773-264-3516</Phone>
+        <Hours >M-F 6-3</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Magazines, Chipboard</Cardboard >
+        <GlassPlastic ></GlassPlastic >
+        <Metals> </Metals>
+    </Pts>
+    <Pts>
+        <ID>52</ID>
+        <Lat>41.968031</Lat>
+        <Lng>-87.654792</Lng>
+        <TYPE>Private</TYPE>
+        <NAME>Uptown Recycling Station Resource Center  </NAME>
+        <Address>4716 N Sheridan Rd</Address>
+        <FullAddress>4716 N Sheridan Rd, Chicago, IL</FullAddress>
+        <Phone>773-821-1351</Phone>
+        <Hours >Daily 8-3 Closed Wed and Sun</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Magazines, Chipboard</Cardboard >
+        <GlassPlastic >Glass Bottles-Clear and Colored</GlassPlastic >
+        <Metals>Aluminum Cans, Aluminum Foil, Tin Cans</Metals>
+    </Pts>
+    <Pts>
+        <ID>53</ID>
+        <Lat>42.026666</Lat>
+        <Lng>-87.703932</Lng>
+        <TYPE>Private</TYPE>
+        <NAME>Evanston Recycling </NAME>
+        <Address>2292 Oakton Street, Evanston, IL</Address>
+        <FullAddress>2292 Oakton Street, Evanston, IL</FullAddress>
+        <Phone></Phone>
+        <Hours >Weekends only F 12-7 Sat-Sun 8-5</Hours >
+        <Cardboard >Newspaper, Cardboard, Office Paper, Junk Mail, Magazines, Chipboard</Cardboard >
+        <GlassPlastic >Glass Bottles-Clear and Colored, #1 Plastic, #2 Plastic</GlassPlastic >
+        <Metals>Aluminum Cans, Aluminum Foil, Tin Cans</Metals>
+    </Pts>
+</root>

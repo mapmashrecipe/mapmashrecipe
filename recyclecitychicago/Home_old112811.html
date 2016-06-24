@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Recycle City Chicago</title>
+<link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="jquery_ui/themes/base/jquery.ui.all.css">
+<link rel="stylesheet" href="jquery_ui/css/demos.css">
+<link rel="stylesheet" href="recyclecitychicago.css">
+<link rel="shortcut icon" href="favicon.ico" >
+<script type="text/javascript" src="downloadxml.js"></script>
+<script type="text/javascript" src="jquery_ui/js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="jquery_ui/ui/jquery.ui.core.js"></script>
+<script src="jquery_ui/ui/jquery.ui.widget.js"></script>
+<script src="jquery_ui/ui/jquery.ui.mouse.js"></script>
+<script src="jquery_ui/ui/jquery.ui.draggable.js"></script>
+<script src="jquery_ui/ui/jquery.ui.position.js"></script>
+<script src="jquery_ui/ui/jquery.ui.resizable.js"></script>
+<script src="jquery_ui/ui/jquery.ui.dialog.js"></script>
+<script type="text/javascript" src="infobubble/src/infobubble.js"></script>
+<script type="text/javascript" src="recyclecitychicago.js"></script>
+</head>
+<body onload="initialize()">
+  <div id="map_canvas"></div>
+    	<div id="sliderWrap3">
+	  <div id="openCloseIdentifier3"></div>
+	  <div id="slider3">
+		<div id="sliderContent3">		  
+		  <p>This app helps you find the nearest recycling facility and the driving direction. If you choose the destination recycling category and type your address or click anywhere on the map, it will automatically find the nearest recycling facility and give you the direction. You may drag the marker of you location and the driving direction will be updated. <br />
+			The Landfill Capacity button will show how much landfill capacity is remained for each county based on Illinois State Data Portal. The Legend button shows recycling center marker symbols and service area layers which show the areas that can be driven within 1, 2, 3, 4 miles for each recycling facility categories if it is turned on. <br />This site is created by Jihoon Son and all rights reserved. If you have any questions, please contact him at <a href="mailto:json@jihoonson.com">here</a>.
+		  </p>	  
+		</div>
+		<div id="openCloseWrap3">
+		  <a href="#" class="topMenuAction3" id="topMenuImage3">
+			<img src="images/aboutB.png"/>
+		  </a>
+		</div>
+	  </div>
+	</div>
+  
+  <div id="sliderWrap1">
+	  <div id="openCloseIdentifier1"></div>
+	  <div id="slider1">
+		<div id="sliderContent1">
+		  <div><span style="font-size:13px;font-weight: bold">Recycling Facilities </span><br/>
+			 <li><img height="22" width="24" src="images/recycleYlegend.png"/>: City of Chicago Recycling Drop-Off</li>
+			 <li><img height="22" width="24" src="images/recycleBlegend.png"/>: Private Recycling Location</li>
+			 <li><img height="22" width="24" src="images/tubeYlegend.png"/>: Pharmaceuticals Disposal Location</li>
+		  </div>
+		  <br />
+		  <form id="radioform"><span style="font-size:13px;font-weight: bold"></>Service Area Layers</b> - view distance from recycling facilities</span><br />
+			<input type="radio" class="radioB" name="servicearea" value="city" onclick="showServiceArea(value)"/> City Recycling Drop-off - Service Area <img src="images/servicearea_legend_3.png"/><br />
+			<input type="radio" class="radioB" name="servicearea" value="private" onclick="showServiceArea(value)"/> Private Recycling Center - Service Area <img src="images/servicearea_legend_5.png"/><br />
+			<input type="radio" class="radioB" name="servicearea" value="allrec" onclick="showServiceArea(value)"/> City & Private Recycle Center - Service Area <img src="images/servicearea_legend_4.png"/><br />
+			<input type="radio" class="radioB" name="servicearea" value="pharm" onclick="showServiceArea(value)"/> Pharmaceuticals Disposal - Service Area <img src="images/servicearea_legend_5.png"/>
+		  </form> 	  
+		</div>
+		<div id="openCloseWrap1">
+		  <a href="#" class="topMenuAction1" id="topMenuImage1">
+			<img src="images/legend_p1.png"/>
+		  </a>
+		</div>
+	  </div>
+	</div>	
+	
+	<div id="sliderWrap2">
+	  <div id="openCloseIdentifier2"></div>
+	  <div id="slider2">
+		<div id="sliderContent2">		  
+		  <div id="chart-select">
+			<label style="font-size:13px;font-weight: bold">Remaining Landfill Capacity (cubic yards): 
+		      <select name="cnty" id="cnty" onchange="loadCnty(value)">
+			    <option value="COOK" selected="selected">COOK County</option>
+			    <option value="DUPAGE">DUPAGE County</option>
+			    <option value="KANE">KANE County</option>
+			    <option value="KENDALL">KENDALL County</option>
+			    <option value="LAKE">LAKE County</option>
+			    <option value="MCHENRY">MCHENRY County</option>
+			    <option value="WILL">WILL County</option>
+			  </select>  
+			</label>
+		  </div>
+		  <div id="chart_div"></div>		  
+		</div>
+		<div id="openCloseWrap2">
+		  <a href="#" class="topMenuAction2" id="topMenuImage2">
+			<img src="images/landfillB.png"/>
+		  </a>
+		</div>
+	  </div>
+	</div>
+	
+  <div id="title"></div>
+  <div id="menu"> 
+    <label>Click anywhere on the map or Type an address to find the nearest Recycling Location
+    </label>	
+    <div class="menuItem">
+      <label>Address: 
+	    <input id="address" type="textbox" value="">
+	  </label>
+    </div>
+	<div class="menuItem">
+		<form id="destination"> 
+		  <label>TO: 
+			<select id="dest" name="destination" onchange="find_closest_marker(addressMarker, value)">		
+				<option value="CityOfChicago" selected="selected">City of Chicago Recycle Drop-off</option>
+				<option value="Private">Private Recycling Center</option>
+				<option value="AllRec">All Recycling Center</option>
+				<option value="Pharm">Dispose of Pharmaceuticals</option>
+		  	</select>
+		  </label>
+		</form>
+	</div>
+	<div class="menuItem">
+		<input class="button" type="button" value="Find" onclick="codeAddress()">
+	  
+	</div>
+    <div id="clearAll">
+	  <form action="">
+	    <input class="button" type="button" value="Clear" onclick="deleteall();">
+      </form>
+	</div>
+  </div>
+  <div id="directions-panel" style="display: none" title="Direction"></div>
+ 
+</body>
+
+</html>

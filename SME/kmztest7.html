@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="keywords" content="kmz test" />
+<meta name="description" content="KMZ TEST" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=7,IE=9, IE=10">
+<!-- Sets whether a web application runs in full-screen mode. -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!-- Sets the style of the status bar for a web application. -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="images/appicon.png" type=""/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<link rel="apple-touch-startup-image" href="images/splash.png"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=9" />
+
+<title>test</title>
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+<!--<link rel="stylesheet" type="text/css" href="css/greshamview.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.3.1.min.css"/>-->
+
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->	
+
+
+
+
+<title>KMZ test</title>
+<link href='http://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+    <style>
+      html, body {
+        height: 100%; width: 100%; 
+      }
+	  #title{
+	    position:absolute;
+		padding: 5px;
+		margin: 0px;
+		top:0px;
+		background-color:white;
+		font-family: 'Chewy', cursive;
+		font-size: 30px;
+	  }
+	  .menuItem input{
+	    font-family: Vernada;
+		font-size: 2em;
+		float:left;
+	  }
+	  #agency_options{
+		position:absolute;
+		float:left;
+		top:0;
+		left: 500px;
+	  }
+	  #agency_options2{
+	    position:absolute;
+		float:left;
+		top:0;	
+		left: 700px;
+	  }
+	  #agencySelect{
+		right:500px;
+	  }
+	  #stopSelect{
+		right:200px;
+	  }
+	  .optionList {
+		font-family: Vernada;
+		font-size: 12px;		
+	  }
+	  #map_canvas {
+        height: 100%;
+        width: 100%;
+		margin: 0; 
+		padding: 0; 
+	    position: absolute;
+	  }
+	  ul {
+		list-style:none;
+	  }
+    </style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=false"></script>
+<script>
+	var map;
+	var layers = new Array();
+	var stopMarkers = new Array();
+	var infowindow;
+	
+function initialize(){
+
+	var myMapOptions = {
+	    center: new google.maps.LatLng(45.43171,-122.512306),
+		zoom: 15,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		overviewMapControl: true,
+		overviewMapcontrolOptions:{opened:false},
+		panControl:true,
+		panControlOptions:{position:google.maps.ControlPosition.RIGHT_CENTER},
+		streetViewControl:true,
+		streetViewControlOptions:{position:google.maps.ControlPosition.RIGHT_CENTER},
+		zoomControl:true,
+		zoomControlOptions:{position:google.maps.ControlPosition.RIGHT_CENTER}
+	};
+
+	map = new google.maps.Map(document.getElementById("map_canvas"), myMapOptions);		
+	layers[0] = new google.maps.KmlLayer({url:"http://maps.greshamoregon.gov/test/MorningRoute5.kmz"});
+	//layers[0].setMap(map);
+	layers[1] = new google.maps.KmlLayer({url:"http://maps.greshamoregon.gov/test/AfternoonRoute5.kmz"});
+	//layers[2]= new google.maps.KmlLayer({url:"http://maps.greshamoregon.gov/test/MorningStops4.kmz"});
+	//layers[3]= new google.maps.KmlLayer({url:"http://maps.greshamoregon.gov/test/AfternoonStops4.kmz"});
+	
+	routelist("redMor");
+}
+function toggleLayers(i){
+  if(layers[i].getMap()==null) {
+     layers[i].setMap(map);
+  }
+  else {
+     layers[i].setMap(null);
+  }
+}
+
+function loadXMLDoc (filename) {
+	if (window.XMLHttpRequest){
+		xhttp = new XMLHttpRequest();
+	}
+	else {
+		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xhttp.open("GET", filename, false);
+	xhttp.send();
+	return xhttp.responseXML;
+}
+
+function routelist(value){
+   
+	if (value == "redMor") {
+		layers[1].setMap(null);
+		//layers[3].setMap(null);
+		layers[0].setMap(map);
+		//layers[2].setMap(map);
+		setAllMap(null);
+		
+		var xmlDoc = loadXMLDoc("MorningStopsXML.xml");
+		var st = xmlDoc.getElementsByTagName("busstop");
+		var route_list="<option value='none' selected='selected'>none</option>";
+		
+		for (i=0;i<st.length;i++) {
+		  var id = xmlDoc.getElementsByTagName("ID")[i].childNodes[0].nodeValue;
+		  var stops = xmlDoc.getElementsByTagName("STOP")[i].childNodes[0].nodeValue;
+		  var time = xmlDoc.getElementsByTagName("TIME")[i].childNodes[0].nodeValue;
+		  route_list += "<option value='" + id + "'>" + stops + "</option>";
+		  
+		  //var pointDir = pointsDir[q];
+		  var latDir = parseFloat(xmlDoc.getElementsByTagName("LAT")[i].childNodes[0].nodeValue);
+		  var lngDir = parseFloat(xmlDoc.getElementsByTagName("LNG")[i].childNodes[0].nodeValue);
+		  //alert(lngDir);
+		  var ptsDir = new google.maps.LatLng(latDir,lngDir);
+		  createStopMarkers(ptsDir,stops,id,time);
+		}
+		document.getElementById("stopSelect").innerHTML = "<select class='optionList' name='stop' id='stopSelect' onchange='stopload()'>" + route_list + "</select>";
+		
+	}
+	else {
+		layers[0].setMap(null);
+		//layers[2].setMap(null);
+		layers[1].setMap(map);
+		//layers[3].setMap(map);
+		setAllMap(null);		
+		
+		var xmlDoc = loadXMLDoc("AfternoonStopsXML.xml");
+		var st = xmlDoc.getElementsByTagName("busstop");
+		var route_list2="<option value='none' selected='selected'>none</option>";
+		
+		for (i=0;i<st.length;i++) {
+		  var id = xmlDoc.getElementsByTagName("ID")[i].childNodes[0].nodeValue;
+		  var stops = xmlDoc.getElementsByTagName("STOP")[i].childNodes[0].nodeValue;
+		  var time = xmlDoc.getElementsByTagName("TIME")[i].childNodes[0].nodeValue;
+		  route_list2 += "<option value='" + id + "'>" + stops + "</option>";
+		  
+		  //var pointDir = pointsDir[q];
+		  var latDir = parseFloat(xmlDoc.getElementsByTagName("LAT")[i].childNodes[0].nodeValue);
+		  var lngDir = parseFloat(xmlDoc.getElementsByTagName("LNG")[i].childNodes[0].nodeValue);
+		  
+		  var ptsDir = new google.maps.LatLng(latDir,lngDir);
+		  createStopMarkers(ptsDir,stops,id,time);
+		}
+		document.getElementById("stopSelect").innerHTML = "<select class='optionList' name='stop' id='stopSelect' onchange='stopload()'>" + route_list2 + "</select>";
+	}
+}
+
+function stopload () {
+	var st = document.getElementById("stopSelect").value;
+	if (document.getElementById("agencySelect").value=== "redMor") {
+		//alert("redMor");
+		var xmlDoc = loadXMLDoc("MorningStopsXML.xml");
+		var bst = xmlDoc.getElementsByTagName("busstop");
+		
+		for (i=0;i<bst.length;i++) {
+		  var id = xmlDoc.getElementsByTagName("ID")[i].childNodes[0].nodeValue;
+		  var stops = xmlDoc.getElementsByTagName("STOP")[i].childNodes[0].nodeValue;
+		  var time = xmlDoc.getElementsByTagName("TIME")[i].childNodes[0].nodeValue;
+		  if (id===st){			
+			  //var pointDir = pointsDir[q];
+			  var stoplatDir = parseFloat(xmlDoc.getElementsByTagName("LAT")[i].childNodes[0].nodeValue);
+			  var stoplngDir = parseFloat(xmlDoc.getElementsByTagName("LNG")[i].childNodes[0].nodeValue);
+			  //alert(lngDir);
+			  var stopPtsDir = new google.maps.LatLng(stoplatDir,stoplngDir);	
+			  map.setCenter(stopPtsDir);
+			  map.setZoom(18);
+			  			  
+			  //open info window.
+			  var newId = Number(id);
+			  if (infowindow) {
+				infowindow.close();
+			  }			  
+			  google.maps.event.trigger(stopMarkers[newId], 'click');
+		  }			  
+		}		
+	}
+	else {
+		var xmlDoc = loadXMLDoc("AfternoonStopsXML.xml");
+		var bst = xmlDoc.getElementsByTagName("busstop");
+		
+		for (i=0;i<bst.length;i++) {
+		  var id = xmlDoc.getElementsByTagName("ID")[i].childNodes[0].nodeValue;
+		  var stops = xmlDoc.getElementsByTagName("STOP")[i].childNodes[0].nodeValue;
+		  var time = xmlDoc.getElementsByTagName("TIME")[i].childNodes[0].nodeValue;
+		  if (id===st){			
+			  //var pointDir = pointsDir[q];
+			  var stoplatDir = parseFloat(xmlDoc.getElementsByTagName("LAT")[i].childNodes[0].nodeValue);
+			  var stoplngDir = parseFloat(xmlDoc.getElementsByTagName("LNG")[i].childNodes[0].nodeValue);
+			  //alert(lngDir);
+			  var stopPtsDir = new google.maps.LatLng(stoplatDir,stoplngDir);	
+			  map.setCenter(stopPtsDir);
+			  map.setZoom(18);
+			  
+			  //open info window.
+			  //var markerId = id -1;
+			  //alert(markerId);
+			  var newId = Number(id);
+			  if (infowindow) {
+				infowindow.close();
+			  }
+			  google.maps.event.trigger(stopMarkers[newId], 'click');
+		  }			  
+		}
+	}
+}
+
+function setAllMap(map) {
+  for (var i = 0; i < stopMarkers.length; i++) {
+    stopMarkers[i].setMap(map);
+  }
+}
+
+//create bus stops for each selected route
+function createStopMarkers(point, title, id, time){
+
+	stopMarkers = new Array();
+	var iconURL = "";
+	var stopInfoHtml = "<div class='infocontent'>" + title + "<br/>Arrival Time: " + time + "</div>" ; 
+		//stopInfoHtml += "<ul><li>"+ title +"</li>";
+		//stopInfoHtml += "<li>"+ time +"</li>";
+		//stopInfoHtml += "</ul></div>";
+        //iconURL = 'image/world.png';	
+		var image = {
+			url: 'image/busstopicon1.png',
+			scaledSize: new google.maps.Size(80, 80),
+			origin: new google.maps.Point(0,0),
+			anchor: new google.maps.Point(0, 30)
+		};
+	
+		var stopMarker = new google.maps.Marker({
+			position: point,
+			map: map,
+			icon: image,
+			title: title			
+		});
+		stopMarkers.push(stopMarker);
+		
+		
+		google.maps.event.addListener(stopMarker, "click", function (e) {
+		    if (infowindow) {
+				infowindow.close();
+			}
+			infowindow = new google.maps.InfoWindow({
+				content: stopInfoHtml
+			});
+			//infoWindow.setContent(stopInfoHtml);
+			infowindow.open(map,stopMarker);
+		});
+
+}
+
+</script>
+</head>
+<body onload="initialize()">
+
+		<div id="map_canvas"></div>
+
+			<div id="title">Spring Mountain Elem. Bus Stop</div>
+			<div data-type="horizontal" data-role="controlgroup" class="ui-btn-right">  
+			  <div class="menuItem">
+				<div id="agency_options" class="optionList">
+				  <form id="agency"><label></label>
+					<select id="agencySelect" onchange="routelist(value)">test
+					  <option value="redMor" id="0" selected="selected">Red Morning</option>
+					  <option value="redAft" id="1">Red Afternoon</option>
+					</select>
+				  </form>
+				</div>
+				<div id="agency_options2" class="optionList">
+				  <form id="stoplist"><label></label>
+					<select class="optionList" name='stop' id='stopSelect' onchange='stopload()'>
+					  <option>choose one</option>
+					</select>
+				  </form>
+				</div>
+			  </div>
+		  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+<script type="text/javascript">
+function initialize(){
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","http://data.cmap.illinois.gov/API/REST/XML/json737/Data?geoglevel=CO&datafield=LANDFILL_CAPCTY",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML;
+
+document.getElementById("to").innerHTML=
+xmlDoc.getElementsByTagName("geog")[0].getAttribute("id");
+/*
+document.getElementById("from").innerHTML=
+xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;
+document.getElementById("message").innerHTML=
+xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;
+*/
+}
+</script>
+</head>
+<body onload="initialize()">
+<h1>W3Schools Internal Note</h1>
+<div>
+<b>id:</b> <span id="to"></span><br />
+<b>:</b> <span id="from"></span><br />
+<b>Message:</b> <span id="message"></span>
+</div>
+
+</body>
+</html>

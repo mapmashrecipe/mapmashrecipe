@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/* Global Content Formatting and Styles */
+
+body {
+	color:#575c7a;
+	line-height:1.5em;
+	font-family: "Century Gothic", Arial, Helvetica, Sans-Serif;
+	font-size:14px;
+background: #f3e2c7; /* Old browsers */
+background: -moz-linear-gradient(left,  #f3e2c7 0%, #a6430a 14%, #a6430a 86%, #e9d4b3 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f3e2c7), color-stop(14%,#a6430a), color-stop(86%,#a6430a), color-stop(100%,#e9d4b3)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #f3e2c7 0%,#a6430a 14%,#a6430a 86%,#e9d4b3 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #f3e2c7 0%,#a6430a 14%,#a6430a 86%,#e9d4b3 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #f3e2c7 0%,#a6430a 14%,#a6430a 86%,#e9d4b3 100%); /* IE10+ */
+background: linear-gradient(to right,  #f3e2c7 0%,#a6430a 14%,#a6430a 86%,#e9d4b3 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3',GradientType=1 ); /* IE6-9 */
+
+}
+
+.page {
+	max-width: 980px;
+	margin: 0px auto 0px auto;
+	position: relative;
+	background-color: #fff;
+}
+
+#headTitle{
+	color: white;
+	font-family:'Rock Salt', cursive;
+	text-align:center;
+	vertical-align:middle;
+	text-shadow: 5px 5px 5px #FF0000;
+}
+
+h1 { font-size:2em; font-weight:normal; color:#a6440a; margin:0 0 .5em 0;}
+h2 { font-size:1.7em; margin: 0 0 1em 0;}
+h3 { font-size:1.5em; margin: 0 0 1em 0;}
+p { margin:0 0 .75em 0; }
+a { color:#de9000;}
+a:hover { color:#009eff;}
+
+footer{ font-size:.85em; color:#9ba0bd; background-color:#a6430a; padding:10px 10px 10px 0px;}
+
+a.cta { 
+	text-transform: uppercase;
+	font-size: .9em;
+	font-weight: bold;
+	text-decoration: none;
+	margin: .5em 0 0 0;
+	padding: 0px 12px 0px 0px;
+	background: url(../images/cta_arrow.png) no-repeat right 0px;
+}
+a.cta:hover { background-position:right -50px}
+
+.promo h3 { font-size: 1.1em; margin: 0; }
+.promo p { line-height: 1.2em; font-size: .9em; margin-bottom: .5em; }
+
+.promo { background-repeat:no-repeat;}
+
+nav a {
+	color: #f5a06e;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+	font-weight: bold;
+	font-size: .9em;
+}
+nav a:hover{ color: #fff;}
+
+.clear-fix { clear:both; line-height:1px;}

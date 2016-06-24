@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="keywords" content="recycling, Chicago, Drop-off, Dropoff" />
+<meta name="description" content="Chicago Recycling Drop-off Center Locator" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Recycle City Chicago</title>
+<link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="jquery_ui/themes/base/jquery.ui.all.css">
+<link rel="stylesheet" href="jquery_ui/css/demos.css">
+<link rel="shortcut icon" href="favicon.ico" >
+<script type="text/javascript" src="downloadxml.js"></script>
+<script type="text/javascript" src="jquery_ui/js/jquery-1.5.1.min.js"></script>
+<!--<script type="text/javascript" src="jquery.jqprint-0.3.js"></script>-->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=places"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="jquery_ui/ui/jquery.ui.core.js"></script>
+<script src="jquery_ui/ui/jquery.ui.widget.js"></script>
+<script src="jquery_ui/ui/jquery.ui.mouse.js"></script>
+<script src="jquery_ui/ui/jquery.ui.draggable.js"></script>
+<script src="jquery_ui/ui/jquery.ui.position.js"></script>
+<script src="jquery_ui/ui/jquery.ui.resizable.js"></script>
+<script src="jquery_ui/ui/jquery.ui.dialog.js"></script>
+<script type="text/javascript" src="infobubble/src/infobubble.js"></script>
+<script type="text/javascript" src="recyclecitychicago1.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35570681-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<link type="text/css" href="jquery_ui/themes/le-frog/jquery-ui-1.8.16.custom.css" rel="stylesheet" />	
+<link type="text/css" href="recyclecitychicago1.css" rel="stylesheet" />	
+</head>
+<body onload="initialize()">
+  <div id="map_canvas"></div>
+    <div id="infoDialog"  style="display:none;">
+	  <p>This app is to make recycling much easier in Chicago by helping you find the nearest recycling drop-off facility (City of Chicago Residential Recycling Drop Off Center, Private Recycling Center, Pharmaceutical Disposal Sites, and Household Chemicals & Computer Recycling Facility) and get driving directions.  <br />
+		You can find more information about recycling in Chicago at <a href="http://www.cityofchicago.org/content/city/en/depts/doe/provdrs/waste_mang.html" target='_blank'>The City of Chicago website</a>. 
+		<br /><br />Below is some useful links of Recycling Resources from the City of Chicago Websites.
+		  <ul>
+			<li><a href="http://www.cityofchicago.org/content/dam/city/depts/doe/general/RecyclingAndWasteMgmt_PDFs/DropOffCenters/BilingualFlyer91511.pdf" target='_blank'>English/Spanish flyer about the City of Chicago Recycling Drop-off Centers</a></li>
+			<li><a href="http://www.cityofchicago.org/content/city/en/depts/doe/supp_info/recycling1/chicago_recyclesthecompletevideo.html" target='_blank'>Chicago Recycles: The Complete Video</a></li>
+			<li><a href="http://www.cityofchicago.org/content/city/en/depts/doe/supp_info/hccrf/household_chemicalscomputerrecyclingfacilityoverview.html" target='_blank'>Household Chemicals and Computer Recycling Facility Overview</a></li>
+			<li><a href="http://www.cityofchicago.org/content/city/en/depts/doe/supp_info/recycling1/how_to_recycle_batteries.html" target='_blank'>Battery recycling</a></li>
+			<li><a href="http://www.cityofchicago.org/content/city/en/depts/doe/supp_info/recycling1/cfl_recycling_anddisposal.html" target='_blank'>CFL Recycling and Disposal</a></li>
+			<li><a href="http://www.cityofchicago.org/content/city/en/depts/doe/supp_info/recycling1/how_to_dispose_oflatexpaint.html" target='_blank'>Disposing of Latex Paint</a></li>
+			<li><a href="http://www.cityofchicago.org/content/city/en/depts/doe/supp_info/recycling1/recylingaz/lettera1.html" target='_blank'>Chicago Recycling Guide - Where can I recycle materials in Chicago?</a></li>
+     	  </ul>
+		Data used in this map are from <a href="http://data.cityofchicago.org">City of Chicago Data Portal</a>, <a href="http://www.cityofchicago.org/city/en.html">City of Chicago Web site</a>, and <a href="http://www.chicagorecycling.org/index.htm">Chicago Recycling Coalition</a>.
+		This site is created by Jay Son and all rights reserved. If you have any questions, please contact him at <a href="mailto:json@jihoonson.com" target='_blank'>here</a>.
+	  </p>	  
+	</div>
+	<div id="questionDialog"  style="display:none;">
+	  <ul>
+	    <li class="question"><img width="25" height="25" src="images/gw_searchS.png"/><b>Search (Find the nearest facility):</b> This button opens a window where you can type an address. If you choose the destination recycling category (City of Chicago Recycling is default), type your address and click the Find button, 
+		the nearest recycling facility from your location and the driving direction to get there will be displayed. Address does not need to include city and zipcode - for example, "833 South Wood Street" will work. You can also click anywhere on the map without typing an address or drag it around to find the closest recycling facility and direction. 
+		The destination location can be changed to City of Chicago Recycling Drop-off Center or Private Recycling Center or Pharmaceutical Disposal sites or Household Chemicals &amp; Computer Recycling or All recycling centers which include City Recycling Drop-off and private Recycling Center.</li>
+		<li class="question"><img width="25" height="25" src="images/gw_layerS.png"/><b>Legend (Recycling facility information):</b> This will show all recycling center marker symbols and legend. When you click the marker on the map, the detailed information of each facility like facility name, address, phone number, opening hour, and accepted recycling materials will be displayed in an information window.</li>
+		<li class="question"><img width="25" height="25" src="images/gw_layer2S.png"/><b>Layers (Buffer layers from recycling facilities):</b> You can turn on these layers by checking radio button. Layers show the areas that can be driven within 1, 2, 3, 4 miles for each recycling facility categories.</li>
+		<li class="question"><img width="25" height="25" src="images/gw_trashcanS.png"/><b>Clear Map:</b> when clicked, all direction, location marker, and service area buffer layers on the map will be deleted.</li>
+		<li class="question"><img width="25" height="25" src="images/gw_questionS.png"/><b>How to use:</b> It explains how to use this site.</li>
+		<li class="question"><img width="25" height="25" src="images/gw_i2S.png"/><b>About:</b> It explains what this apps for and where the data from and provides additional recycling resource links.</li>
+	  </ul>
+	</div>
+
+  	<div id="legendDialog" style="display:none;">
+	  <span style="font-size:13px;font-weight: bold">Recycling Facilities </span><br/>
+	  <li class="recycle"><img height="22" width="24" src="images/recycleYlegend.png"/>: City of Chicago Recycling Drop-Off</li>
+	  <li class="recycle"><img height="22" width="24" src="images/recycleBlegend.png"/>: Private Recycling Location</li>
+	  <li class="recycle"><img height="22" width="24" src="images/tubeYlegend.png"/>: Pharmaceuticals Disposal Location</li>
+	  <li class="recycle"><img height="22" width="24" src="images/computerlegend.png"/>: Household Chemicals & Computer Recycling Facility</li>
+	</div>
+	
+	<div id="layerDialog" style="display:none;">		  
+	  <form id="radioform"><span style="font-size:13px;font-weight: bold"></>Service Area Layers</b> - view distance from recycling facilities</span><br />
+		<input type="radio" class="radioB" name="servicearea" value="city" onclick="showServiceArea(value)"/> City Recycling Drop-off - Service Area <img src="images/servicearea_legend_3.png"/><br />
+		<input type="radio" class="radioB" name="servicearea" value="private" onclick="showServiceArea(value)"/> Private Recycling Center - Service Area <img src="images/servicearea_legend_5.png"/><br />
+		<input type="radio" class="radioB" name="servicearea" value="allrec" onclick="showServiceArea(value)"/> City & Private Recycle Center - Service Area <img src="images/servicearea_legend_4.png"/><br />
+		<input type="radio" class="radioB" name="servicearea" value="pharm" onclick="showServiceArea(value)"/> Pharmaceuticals Disposal - Service Area <img src="images/servicearea_legend_5.png"/>
+	  </form> 	  
+	</div>
+	
+	
+  <div id="title"></div>
+  
+  <div id="menu"><a class="menuItem" id="openAddressDialog" href="#"><img src="images/gw_search.png" onmouseover="this.src='images/gw_search_hover.png'" onmouseout="this.src='images/gw_search.png'"></a>
+    <a class="menuItem" id="openLegendDialog" href="#"><img src="images/gw_layer.png" onmouseover="this.src='images/gw_layer_hover.png'" onmouseout="this.src='images/gw_layer.png'"></a>
+    <a class="menuItem" id="openLayerDialog" href="#"><img src="images/gw_layer2.png" onmouseover="this.src='images/gw_layer2_hover.png'" onmouseout="this.src='images/gw_layer2.png'"></a>
+	<a class="menuItem" id="openDeleteFunction" href="javascript:void(0)" onclick="deleteall()"><img src="images/gw_trashcan.png" onmouseover="this.src='images/gw_trashcan_hover.png'" onmouseout="this.src='images/gw_trashcan.png'"></a>
+	<a class="menuItem" id="openQuestionDialog" href="#"><img src="images/gw_question.png" onmouseover="this.src='images/gw_question_hover.png'" onmouseout="this.src='images/gw_question.png'"></a>
+	<a class="menuItem" id="openInfoDialog" href="#"><img src="images/gw_i2.png" onmouseover="this.src='images/gw_i2_hover.png'" onmouseout="this.src='images/gw_i2.png'"></a>
+  </div>	
+  
+  <div id="addressDialog" style="display:none;"> 
+    <label style="font-size:14px">Click anywhere on the map or Type an address to find the nearest Recycling Drop-off Center (Your location marker <img src="images/carlegend.png"> can be dragged)
+    </label>
+		<br />
+    <div class="menuItem">
+      <label>Address: 
+	    <input class="inputB" id="address" type="textbox" value="">
+		<br/>	&nbsp;&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp; <span style="font-size:14px">(ex: 833 South Wood Street)</span>
+	  </label>
+    </div>
+	<div class="menuItem">
+		<form id="destination" > 
+		  <label>TO: 
+			<select id="dest" class="inputB" name="destination" onchange="find_closest_marker(addressMarker, value);selectedValueChange()">		
+				<option value="CityOfChicago" selected="selected">City of Chicago Recycle Drop-off</option>
+				<option value="Private">Private Recycling Center</option>
+				<option value="AllRec">All Recycling Center</option>
+				<option value="Pharm">Dispose of Pharmaceuticals</option>
+				<option value="Comp">Household Chemicals &amp; Computer Recycling</option>
+		  	</select>
+		  </label>
+		</form>
+	</div>
+	<div class="menuItem">
+		<input class="button" type="button" value="Find" onclick="codeAddress()">	  
+	</div>
+  </div>
+
+  <div id="directions-panel" style="display: none" title="Direction"></div>
+  
+  <div id="dialog" title="HOW TO USE THIS APP" >
+	<span id="dialogTitle">Recycling Drop-Off Centers Locator</span><br /><p>This map application is to help chicago residents find a closest Recylcing Drop-Off facility from their location and get driving directions. If you agree to share your location with the site, the closest City of Chicago Recycling Drop-off center from your location is displayed with the driving direction.
+	You can also simply click anywhere on the map or click the search button and type your address to retrieve this information. 
+	<br />You can choose <b>City of Chicago Recycling Drop-off Center</b> or <b>Private Recyling Center</b> or <b>Pharmaceuticals Disposal Center</b> or <b>Household Chemicals &amp; Computer Recycling</b> as one of the destination. Each recycling facility icon, if clicked, will show the detailed information about each facility.
+	<br />Click <img src="images/gw_questionS.png"> for more information about how to use this app.
+	</p>
+  </div>
+ 
+</body>
+
+</html>

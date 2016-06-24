@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* Layout (global rules for all sizes) */
+body { margin:0; padding:0}
+
+header a.logo {
+	display: block;
+	position: absolute;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+nav {
+	width: 100%;
+	display: block;
+	position: absolute;
+	background-color: #a6430a;
+}
+
+/* Layout Large Screens (default for older browsers) */
+
+header {
+	height: 150px;
+	background: url(../images/headerB_large.jpg) no-repeat right 0px;
+	/*background-color:black;*/
+}
+
+header a.logo {
+	width:100px;
+	height: 100px;
+	top: 28px;
+	right: 28px;
+	background-image: url(../images/mmr_logo_large.png);
+}
+#headTitle{
+	font-size:4em;
+	padding-top:70px;
+	padding-right:110px;
+}
+
+article { padding:60px 20px 10px 20px;}
+
+.promo_container { padding:0px 0px 15px 20px;}
+.promo_container .promo {
+	width: 32%;
+	float: left;
+	background-position: 0px 0px;
+	margin: 0 1% 0 0;
+}
+.promo_container .promo .content { padding:250px 30px 0px 0px;}
+
+
+.promo.one { background-image: url(../images/promo_1.jpg);}
+.promo.two { background-image: url(../images/promo_2.jpg);}
+.promo.three { background-image: url(../images/promo_3.jpg);}
+
+
+.project_container { padding:0px; }
+
+.project_container .project { 
+	width: auto;
+	float: none;
+	padding: 10px 0px 0px 0px;
+	background-position: 10px 13px;
+	border-top: 1px solid #ccc;	
+	margin: 20px;
+	min-height: 210px;
+}
+.project_container .project .content { padding: 0px 20px 5px 350px;}
+
+.project.three { background: url(../images/pdxtransitSS.jpg) no-repeat;}
+.project.four { background: url(../images/rcc_ss1.png) no-repeat;}
+.project.five { background: url(../images/sdk_ss.png) no-repeat;}
+.project.six { background: url(../images/iowacitybus_ss1.png) no-repeat;}
+.project.seven { background: url(../images/prj_buildout.jpg) no-repeat;}
+.project.eight { background: url(../images/prj_fcestatus.png) no-repeat;}
+.project.nine { background: url(../images/prj_ianature.png) no-repeat;}
+.project.ten { background: url(../images/g_nf.jpg) no-repeat;}
+.project.eleven { background: url(../images/wc_ss.jpg) no-repeat;}
+
+
+nav { top: 150px;}
+nav a { margin: 12px 20px 10px 20px; position: relative; float: right;}
+
+@media screen and (max-width:990px){
+	footer { padding-left: 20px;}
+}

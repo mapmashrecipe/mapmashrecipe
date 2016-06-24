@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<busstops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<busstop>
+		<ID>1</ID>
+		<STOP>SE Vista Heights St @ SE Natalya St</STOP>
+		<TIME>7:10</TIME>
+		<LAT>45.431748</LAT>
+		<LNG>-122.513894</LNG>
+	</busstop>
+	<busstop>
+		<ID>2</ID>
+		<STOP>SE Crown Vista Dr @ SE Lyon Crest St</STOP>
+		<TIME>7:11</TIME>
+		<LAT>45.430685</LAT>
+		<LNG>-122.515662</LNG>
+	</busstop>
+	<busstop>
+		<ID>3</ID>
+		<STOP>SE Faris St @ SE Hadeed St</STOP>
+		<TIME>7:13</TIME>
+		<LAT>45.430288</LAT>
+		<LNG>-122.513829</LNG>
+	</busstop>
+	<busstop>
+		<ID>4</ID>
+		<STOP>SE 147th Ave @ SE Natalya St</STOP>
+		<TIME>7:13</TIME>
+		<LAT>45.431041</LAT>
+		<LNG>-122.512377</LNG>
+	</busstop>
+	<busstop>
+		<ID>5</ID>
+		<STOP>Academy 4 Kids on 147th</STOP>
+		<TIME>7:17</TIME>
+		<LAT>45.4233</LAT>
+		<LNG>-122.51215</LNG>
+	</busstop>
+	<busstop>
+		<ID>6</ID>
+		<STOP>SE 142nd Ave @ SE Goddard School Daycare</STOP>
+		<TIME>7:18</TIME>
+		<LAT>45.424072</LAT>
+		<LNG>-122.517462</LNG>
+	</busstop>
+	<busstop>
+		<ID>7</ID>
+		<STOP>SE Summerfield Way @ SE 142nd Ave</STOP>
+		<TIME>7:19</TIME>
+		<LAT>45.42621</LAT>
+		<LNG>-122.51748</LNG>
+	</busstop>
+	<busstop>
+		<ID>8</ID>
+		<STOP>SE 149th Ave @ SE Hampshire Ct</STOP>
+		<TIME>7:23</TIME>
+		<LAT>45.42753</LAT>
+		<LNG>-122.522061</LNG>
+	</busstop>
+	<busstop>
+		<ID>9</ID>
+		<STOP>13883 SE Hampshire Way</STOP>
+		<TIME>7:24</TIME>
+		<LAT>45.426995</LAT>
+		<LNG>-122.520727</LNG>
+	</busstop>
+	<busstop>
+		<ID>10</ID>
+		<STOP>13711 SE Sunnyside Rd</STOP>
+		<TIME>7:25</TIME>
+		<LAT>45.42586</LAT>
+		<LNG>-122.5222</LNG>
+	</busstop>
+	<busstop>
+		<ID>11</ID>
+		<STOP>Arrive Spring Mountain E. S.</STOP>
+		<TIME>7:30</TIME>
+		<LAT>45.4372100004</LAT>
+		<LNG>-122.53482</LNG>
+	</busstop>
+</busstops>

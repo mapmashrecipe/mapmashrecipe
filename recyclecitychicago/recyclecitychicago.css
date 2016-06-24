@@ -1,0 +1,280 @@
+  body {
+    font-family: sans-serif;
+  }
+
+  #title{
+	width: 360px;
+	height: 55px;
+	top:0px;
+	left:0px;
+	background-image:url('images/RecycleTitle.png');
+	background-color: green;
+	margin: 0px;
+	padding: 0px;
+	font-size: 20px;
+	color: white;
+	text-align:center;
+	font-family:Vernada, Arial, Serif;
+	position: absolute;
+	border:0;
+	-webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 4px 8px;
+	-moz-box-shadow: rgba(64, 64, 64, 0.5) 0 4px 8px;
+	box-shadow: rgba(64, 64, 64, 0.1) 0 4px 8px;
+  }
+  	/*menu bar style*/
+	#menu{
+		position:absolute;
+		top:0px;left:360px;right:0px;height:35px;width:630px;
+		margin: 0px;
+		padding: 10px;
+		font-size:0.9em;
+		font-family:Verdana;
+		foat:left;
+		background-color: #1a4e04;/*#376090;*/
+		color: White;
+		vertical-align: middle;
+	-webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 4px 8px;
+	-moz-box-shadow: rgba(64, 64, 64, 0.5) 0 4px 8px;
+	box-shadow: rgba(64, 64, 64, 0.1) 0 4px 8px;
+    }
+	.menuItem{
+		float:left;
+		background-color: #1a4e04;
+	}
+	/*input style*/
+	input, select {
+		background-color: #bbefbb;
+		border: 1px solid #0E2F56;
+		color: Black;
+		font-size: 9pt;
+		height: 18px;
+		margin-top: 3px;
+		margin-right: 7px;
+    }
+	input.radioB {
+		background-color: #1a4e04;
+		border: none;
+		color: Black;
+		font-size: 1em;
+		height: 18px;
+		margin-right: 7px;
+    }
+	#radioform{
+		height:125px;
+	}
+	#address {
+		background-color: #bbefbb;
+		border: 1px solid #0E2F56;
+		color: Black;
+		font-size: 9pt;
+		height: 13px;
+		margin-top: 3px;
+		margin-right: 7px;
+    }
+	#address {
+		width:200px;
+	}
+	input, button {
+		color: black;
+	}
+	input, button : hover{
+		color: red;
+	}
+	a {
+		color:#bbefbb;
+	}
+	/*button style*/
+	.button {
+		padding: 0px 2px;
+		display: inline;
+		background-color: #bbefbb;
+		border: 1px;
+		color: black;
+		cursor: pointer;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+    }
+	.button:hover {
+		background-position: 0 -48px;
+		color:white;
+    }
+	.button:active {
+		background-position: 0 top;
+		position: relative;
+		top: 1px;
+		padding: 0px 2px 1px;
+    }
+	#clearAll{
+		background-color: #1a4e04;
+	}
+	#directions-panel{
+		font-size: 10px;
+		-webkit-box-shadow: rgba(164, 164, 164, 0.5) 0 8px 16px;
+	    -moz-box-shadow: rgba(164, 164, 164, 0.5) 0 8px 16px;
+	    box-shadow: rgba(164, 164, 164, 0.1) 0 8px 16px;
+	}
+	.ui-dialog-titlebar {
+		height:20px;
+		font-size: 12px;
+	}
+	/* Info Window */
+	.phoney {background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.21, rgb(54,94,12)),color-stop(0.5, rgb(92,160,19)),color-stop(0.81, rgb(54,94,12)));
+		background-image: -moz-linear-gradient(center bottom,rgb(54,94,12) 21%,rgb(92,160,19) 50%,rgb(54,94,12) 81%);
+	}
+    .phoneytext {
+        text-shadow: 0 -1px 0 #000;
+        color: #fff;
+        font-family: Helvetica Neue, Helvetica, arial;
+        font-size: 12px;
+        line-height: 25px;
+        padding:0px 10px 0px 10px;
+    }
+	ul.name{
+	    font-weight: bold;
+	}
+    .phoneytab {
+	    padding: 8px;
+        text-shadow: 0 -1px 0 #000;
+        color: #fff;
+        font-family: Helvetica Neue, Helvetica, arial;
+        font-size: 15px;
+		font-weight: bold;
+		borderRadius: 10,
+        background: #365E0C   !important;
+      }
+	/*Chart*/
+	#chart_div{;
+		padding:0;
+	}
+
+	/*slide menu style*/
+	#sliderWrap1 {
+		position:absolute;
+		left:508px;
+		top:0px;
+		margin: 0 auto;
+		width: 500px;
+	}
+	#slider1 {
+		position: absolute;
+		width: 495px;
+		height: 90px;
+		margin-top: -186px;
+	}
+	#slider1 img {
+		border: 0;
+	}
+	#sliderContent1 {
+		margin: 0px 0 0 0px;
+		position: absolute;
+		text-align:left;
+		width: 492px;
+		background-color:#1a4e04;
+		color:white;
+		font-size:0.75em;
+		padding:5px 5px 5px 5px;
+		border-radius:0px; 
+        -moz-border-radius:0px;
+        -webkit-border-radius:0px;
+        transition:0.8s ease-in-out;
+	    box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+	    -moz-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+	    -webkit-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+	    -moz-transition:0.8s ease-in-out;
+	    -o-transition:0.8s ease-in-out;
+	    -webkit-transition:all 0.8s ease-in-out;
+	}
+	#sliderContent1 ul{
+		list-style-type: none;
+	}
+	#openCloseWrap1 {
+	    color:white;
+		position:absolute;
+		margin: 241px 0px 0 433px;
+	}	
+	#close{
+		text-align:right;
+	}
+	#sliderWrap2 {
+		position:absolute;
+		left:0px;
+		top:55px;
+		margin: 0 auto;
+		width: 500px;
+	}
+	#slider2 {
+		position: absolute;
+		width: 450px;
+		height: 180px;
+		margin-left: -430px;
+	}
+	#slider2 img {
+		border: 0;
+	}
+	#sliderContent2 {
+		margin: 0px 0 0 0px;
+		position: absolute;
+		text-align:left;
+		width: 421px;
+		background-color:#1a4e04;
+		color:white;
+		font-size:0.7em;
+		padding:5px 5px 5px 5px;
+		border-radius:0px; 
+        -moz-border-radius:0px;
+        -webkit-border-radius:0px;
+        transition:0.8s ease-in-out;
+	    box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+	    -moz-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+	    -webkit-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+	    -moz-transition:0.8s ease-in-out;
+	    -o-transition:0.8s ease-in-out;
+	    -webkit-transition:all 0.8s ease-in-out;
+	}
+	#openCloseWrap2 {
+	    color:white;
+		position:absolute;
+		margin: 0px 0 0 430px;
+	}
+	#sliderWrap3 {
+		position:absolute;
+		left:0px;
+		top:269px;
+		margin: 0 auto;
+		width: 700px;
+	}
+	#slider3 {
+		position: absolute;
+		width: 700px;
+		height: 180px;
+		margin-left: -650px;
+	}
+	#slider3 img {
+		border: 0;
+	}
+	#sliderContent3 {
+		margin: 0px 0 0 0px;
+		position: absolute;
+		text-align:left;
+		width: 641px;
+		background-color:#1a4e04;
+		color:white;
+		font-size:0.75em;
+		padding:5px 5px 5px 5px;
+		border-radius:0px; 
+        -moz-border-radius:0px;
+        -webkit-border-radius:0px;
+        transition:0.8s ease-in-out;
+	    box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+	    -moz-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+	    -webkit-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+	    -moz-transition:0.8s ease-in-out;
+	    -o-transition:0.8s ease-in-out;
+	    -webkit-transition:all 0.8s ease-in-out;
+	}
+	#openCloseWrap3 {
+	    color:white;
+		position:absolute;
+		margin: 0px 0 0 650px;
+	}

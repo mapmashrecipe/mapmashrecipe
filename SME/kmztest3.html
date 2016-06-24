@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="keywords" content="kmz test" />
+<meta name="description" content="KMZ TEST" />
+<title>KMZ test</title>
+    <style>
+      html, body, #map_canvas {
+        height: 100%; width: 100%; margin: 0; padding: 0; 
+      }
+    </style>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=false"></script>
+<script>
+	var map;
+	var layers = new Array();
+function initialize(){
+
+	var myMapOptions = {
+	    center: new google.maps.LatLng(45.43171,-122.512306),
+		zoom: 15,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		overviewMapControl: true,
+		overviewMapcontrolOptions:{opened:false},
+		panControl:true,
+		panControlOptions:{position:google.maps.ControlPosition.RIGHT_CENTER},
+		streetViewControl:true,
+		streetViewControlOptions:{position:google.maps.ControlPosition.RIGHT_CENTER},
+		zoomControl:true,
+		zoomControlOptions:{position:google.maps.ControlPosition.RIGHT_CENTER}
+	};
+
+	map = new google.maps.Map(document.getElementById("map_canvas"), myMapOptions);		
+	layers[0] = new google.maps.KmlLayer({url:"http://maps.greshamoregon.gov/test/MorningRoute4v2.kmz"});
+	layers[0].setMap(map);
+	layers[1] = new google.maps.KmlLayer({url:"http://maps.greshamoregon.gov/test/AfternoonRoute4v3.kmz"});
+	layers[2]= new google.maps.KmlLayer({url:"http://maps.greshamoregon.gov/test/MorningStops4.kmz"});
+	layers[2].setMap(map);
+	layers[3]= new google.maps.KmlLayer({url:"http://maps.greshamoregon.gov/test/AfternoonStops4.kmz"});
+	
+}
+function toggleLayers(i){
+  if(layers[i].getMap()==null) {
+     layers[i].setMap(map);
+  }
+  else {
+     layers[i].setMap(null);
+  }
+}
+
+function loadXMLDoc (filename) {
+	if (window.XMLHttpRequest){
+		xhttp = new XMLHttpRequest();
+	}
+	else {
+		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xhttp.open("GET", filename, false);
+	xhttp.send();
+	return xhttp.responseXML;
+}
+
+function routelist(value){
+	if (value == "redMor") {
+		layers[1].setMap(null);
+		layers[3].setMap(null);
+		layers[0].setMap(map);
+		layers[2].setMap(map);
+		
+		var xmlDoc = loadXMLDoc("MorningStopsXML.xml");
+		var st = xmlDoc.getElementsByTagName("busstop");
+		var route_list="<option value='none' selected='selected'>none</option>";
+		
+		for (i=0;i<st.length;i++) {
+		  var id = xmlDoc.getElementsByTagName("ID")[i].childNodes[0].nodeValue;
+		  var stops = xmlDoc.getElementsByTagName("STOPS")[i].childNodes[0].nodeValue;
+		  route_list += "<option value='" + id + "'>" + stops + "</option>";
+		}
+		document.getElementById("route_options").innerHTML = "<frame id='route'><select name='stop' id='stopSelect'>" + route_list + "</select></label></frame>";
+		
+	}
+	else {
+		layers[0].setMap(null);
+		layers[2].setMap(null);
+		layers[1].setMap(map);
+		layers[3].setMap(map);	
+	}
+}
+</script>
+</head>
+<body onload="initialize()">
+
+Layer1 <input type="checkbox" id="layer_01" onclick="toggleLayers(0);"/>
+Layer2 <input type="checkbox" id="layer_02" onclick="toggleLayers(1);"/>
+Layer3 <input type="checkbox" id="layer_03" onclick="toggleLayers(2);"/>
+Layer4 <input type="checkbox" id="layer_04" onclick="toggleLayers(3);"/>
+
+	  <div class="menuItem">
+	    <div id="agency_options">
+		  <form id="agency"><label>
+		    <select id="agencySelect" onchange="routelist(value)">
+		      <option value="redMor" id="0" selected="selected">Red Morning</option>
+			  <option value="redAft" id="1">Red Afternoon</option>
+		    </select></label>
+		  </form>
+	    </div>
+	    <div id="route_options"></div>	  
+	  </div>
+
+
+<div id="map_canvas"></div>
+
+</body>
+</html>

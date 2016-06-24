@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=7,IE=9, IE=10, IE=11">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Sets whether a web application runs in full-screen mode. -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!-- Sets the style of the status bar for a web application. -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="images/appicon.png" type=""/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<link rel="apple-touch-startup-image" href="images/splash.png"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=9" />
+
+<meta name="keywords" content="PDX Portland Trimet Transit" />
+<meta name="description" content="Portland Bus Tracker" />
+<title>PDX Transit</title>
+<!--<link rel="stylesheet" href="css/jquery-ui.css" />-->
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+<!--<link rel="stylesheet" href="css/leaflet.css" />-->
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<link rel="stylesheet" href="css/l.geosearch.css" />
+<!--<link rel="stylesheet" href="css/bootstrap.min.css"/>-->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+<!--<link rel="stylesheet" href="css/bootstrap-theme.min.css"/>-->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+<!--<link rel="stylesheet" href='css/fonts.google.Cabin.css'>-->
+<link href='http://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/pdxtransit.css"/>
+
+<!--<script src="js/jquery.min.js"></script>-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--<script src="js/jquery-ui.min.js"></script>-->
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+<script src="js/downloadxml_new.js"></script>
+<!--<script src="js/leaflet.js"></script>-->
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src="js/l.control.geosearch.js"></script>
+<script src="js/l.geosearch.provider.google.js"></script>
+<!--<script src="js/bootstrap.min.js"></script>-->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body onload="initialize()">
+		<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+		  <div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a id="titleLink" href="#" data-toggle="modal" data-target="#titleModal" data-backdrop="false"><img height="40" width="69" style="margin-right:5px;" src="images/PdxTransit2.png" alt="PDXTransit"></a>
+			</div>
+			  
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav">
+			  <div class="input-group" style="width:600px">
+				<li class="dropdown">
+				<div id="route_options"></div>
+				<div id="route_dir_options"></div>
+				<div id="routeStop_dir_options"></div>
+				</li>
+			  </div>
+			  </ul>
+<!--
+			  <ul class="nav navbar-nav navbar-right">
+				<li>
+				  <div class="btn-group">
+					<button class="btn btn-default" type="button" onclick="deleteall();"><img src="images/glyphicons-193-circle-remove.png" alt="delete"/></button>  
+					<button class="btn btn-default" type="button" onclick="showHelp()"><img src="images/glyphicons-196-circle-info.png" alt="info" /></button> 
+				  </div>      	
+				</li>
+			  </ul>
+-->
+
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+     <div id="map_wrap">
+          <div id="map_canvas"></div>
+		  <button id="searchIcon" class="btn btn-default" type="button" onclick="searchOpen();" data-toggle="tooltip" data-placement="bottom" title="Find stops within 500 ft."><img src="images/glyphicons-28-search_16.png" alt="search"/></button>  
+		  <button id="clearGraphics" class="btn btn-default btn-circle" type="button" onclick="deleteall();" data-toggle="tooltip" data-placement="left" title="delete all graphics"><img src="images/glyphicons-193-circle-remove.png" alt="delete"/></button>  
+     </div>
+	
+	
+	<div class="helpCallout" style="height:80px;width:180px;top:90px;left:40%;position:absolute;"><span class="glyphicon glyphicon-arrow-up"></span>Type an address to show Trimet Stops within 500 ft of that address.</div>
+	<div class="helpCallout" style="height:30px;width:130px;top:50px;right:53px;position:absolute;">Delete all markers.<span class="glyphicon glyphicon-arrow-up"></span></div>
+	<div class="helpCallout" style="height:90px;width:50px;top:50px;right:0px;position:absolute;"><span class="glyphicon glyphicon-arrow-up"></span>Show help tooltips</div>
+	<div class="helpCallout" style="height:110px;width:160px;top:50px;left:72px;position:absolute;"><span class="glyphicon glyphicon-arrow-up"></span>Click here to get a Route list and then choose a direction to see all stops of that route.</div>
+	
+	<!-- Modal -->
+	<div class="modal" id="titleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<div>Welcome to <b>PDX Transit Map</b>! You can search nearby MAX, BUS, Light Rail stops just by clicking anywhere on the map or typing an address. Or select a route and direction to make the whole stops of that route to show up. Then, you can select a stop or click a stop to check arrival info. <br/>This app uses TriMet Open Data and Open Street Map, and won the Best Web Map Application award at 2014 FOSS4G International Conference.
+					<div style="float:right;">
+						<a href="https://www.facebook.com/pages/PDX-Transit/671101029646684"><img src="images/facebook.png" alt="facebook"/></a>
+						<a href="https://twitter.com/PDXTransitMap"><img src="images/twitter.png" alt="twitter" /></a>
+						<a href="mailto:mapmashrecipe@gmail.com"><img src="images/mail.png" alt="mail"/></a>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="js/pdxtransit_min.js"></script>
+</body>
+</html>

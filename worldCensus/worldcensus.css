@@ -1,0 +1,234 @@
+        html, body {
+          padding-top: 50px;
+          /*overflow-y: hidden;*/
+        }
+        .container{  
+          width: 100%;
+          margin:0;
+          padding-top: 50px;
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+        .content {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+        }
+        #map {
+          height: 100vh;
+          margin: 0;
+          padding: 0;
+          width:100%;
+        }
+        button.ui-btn{
+          width:auto;
+        }
+        #btnRightPanel{
+          position: absolute;
+          top: 60px;
+          right: 20px;
+        }
+
+        // Classes
+        .show {
+          display: block !important;          
+        }
+        .hidden {
+          display: none !important;
+          visibility: hidden !important;
+        }
+        .invisible {
+          visibility: hidden;
+        }
+
+        // Usage as mixins
+        .element {
+          .show();
+        }
+        .another-element {
+          .hidden();
+        }
+        .label {
+          padding-left:40px;
+          color:black;
+        }
+        input[type="checkbox"]{
+          margin-top: 1px;
+        }
+            .input-xs {
+          height: 22px;
+          padding: 5px 5px;
+          font-size: 12px;
+          line-height: 1.5;
+          border-radius: 3px;
+        }
+        .panel-group{
+          padding-top: 10px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        #rightC{
+          padding-left: 10px;
+          /*max-height: 950px;
+          float:left;
+          overflow: auto;
+          overflow-x:hidden;*/
+        }
+        #middleC{
+          padding-right: 0px;
+          border-right: 3px solid #C0C0C0;
+        }
+        #rightNavTab{
+          padding-left: 20px;
+        }
+        #addressSearch{
+          width: 360px;
+        }
+        #titleText{
+          color: white;          
+          font-family: 'Coda', cursive, Arial, sans-serif;
+          font-weight: 800;
+        }
+        #titleText:hover{
+          text-shadow: 2px 2px #837e7c;
+        }
+        .navbar{
+          font-family: Arial, sans-serif;
+        }
+        body{
+          font-family: 'Roboto', sans-serif;
+        }
+        body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
+            margin-right: 0;
+        }
+
+        .modal {
+            overflow-y: auto;
+        }
+        #dropdownMenu1, #btnRightPanel{
+          height:40px;
+          width: 45px;
+        }
+        #search{
+          width:380px;
+        }
+        #search_input{
+          width:80%;
+        }
+        #legendDiv{
+          padding: 15px;
+        }
+        ul.n {
+          list-style-type: none;
+        }
+        ul.nav li {
+          padding:0px;
+          margin: 0px;
+        }
+        @media only screen and (max-width: 992px) {
+          #map{
+            height: 80vh;
+          }
+        }
+        /*
+        #map_graphics_layer path{
+          stroke-width:0px;
+        }
+        */
+        .sliderInput{
+          float: left;
+        }
+        .opacityFont, label.opacityFont {
+          font-family: "Arial Black", sans-serif ;
+          font-size: 13px;
+          color: #808080;
+          text-align: justify;
+          vertical-align: middle;
+        }
+        #helpLink, #printLink{
+          color:#e8e8e8;
+        }
+        #helpLink:hover, #printLink:hover{
+          /*text-shadow: 4px 6px 8px #a0a0a0;
+          -webkit-text-stroke:0.5px white;*/
+          font-size: 1.1em;
+          color: white;
+          text-shadow: 2px 2px #837e7c;
+        }
+        .titleButtons{
+          float: right;
+          padding-right: 5px;
+        }
+        #graphic {
+          margin: 0 auto;
+        }
+        path.slice{
+          stroke-width:2px;
+        }
+        polyline{
+          opacity: .3;
+          stroke: black;
+          stroke-width: 2px;
+          fill: none;
+        }
+        .axis path, .axis line, .axisLE path, .axisLE line, .axisBDM path, .axisBDM line, .axisMR path, .axisMR line{
+          fill:none;
+          stroke:black;
+          shape-rendering: crispEdges;
+        }
+        .axis text, .axisLE text{
+          font-family:sans-serif;
+          font-size:11px;
+        }
+        .medianValue{
+          font-family:Tahoma;
+          font-size: 1.3em;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        #iResults{
+          font-family: 'Roboto Slab', "Helvetica Neue", Helvetica, sans-serif;
+          font-weight: 700;
+          color: #CB4B19;
+          font-size: 1.1em;
+          margin-bottom: 1.4em;
+        }
+		
+		.chart rect {
+		  stroke: white;
+		  fill-opacity: .6;
+		  fill: steelblue;
+
+		}
+		.bar.positive {
+		  fill: steelblue;
+		}
+
+		.bar.negative {
+		  fill: brown;
+		}
+        #btnSearchCategory{
+          height: 30px;
+          margin:0px;
+          padding: 0px 5px;
+          float:left;
+          font-size: 0.85em;
+        }
+		#searchByDropDown.dropdown-menu{
+          right:auto;
+        }
+		#fullExtent{
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			width:42px;
+			height:32px;
+		}
+		#yearSelection{
+			float:right;
+			width: 100px;
+			max-height: 400px;
+		}
+		select{
+			color:#808080;
+		}

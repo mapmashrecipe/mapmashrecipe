@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7, IE=9, IE=10, IE=11">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Sets whether a web application runs in full-screen mode. -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no" />	
+		
+	<!-- Sets the style of the status bar for a web application. -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<meta name="keywords" content="100 International Dialogues for 2014, Bubryun, Jungto Society, jungto" />
+	<meta name="description" content="100 International Dialogues for 2014" />	
+	
+    <title>wehopeworld</title>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<link rel="stylesheet" href="css/MarkerCluster.css"/>
+	<link rel="stylesheet" href="css/MarkerCluster.Default.css"/>
+	<link rel="stylesheet" href="css/l.geosearch.css" />
+	<link rel="stylesheet" href="css/jtsMap.css" />
+		
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-35585513-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>	
+
+</head>
+<body>
+    <div id="map"></div>    
+	<button id="searchIcon" class="btn btn-default" type="button" onclick="searchOpen();" data-toggle="tooltip" data-placement="bottom" title="Find stops within 500 ft."><img src="images/glyphicons-28-search_16.png" alt="search"/></button>  
+	<div id="stopListG"></div>
+
+	<div><a href="http://www.jungtosociety.org/sketch/"><img id="titleImage" src="images/2014-100-lectures-orange_700.jpg" alt="2014 100 Lectures"/></a></div>
+<!--
+JavaScripts
+-->	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="js/l.control.geosearch.js"></script>
+	<script src="js/l.geosearch.provider.google.js"></script>
+	<script src="js/leaflet.markercluster-src.js"></script>
+	<script src="js/jtsMap.js"></script>
+</body>
+</html>

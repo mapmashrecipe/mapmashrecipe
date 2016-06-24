@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<busstops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<busstop>
+		<ID>1</ID>
+		<STOP>Leave Spring Mountain E. S.</STOP>
+		<TIME>2:05</TIME>
+		<LAT>45.4372100004</LAT>
+		<LNG>-122.53482</LNG>
+	</busstop>
+	<busstop>
+		<ID>2</ID>
+		<STOP>SE 142nd Ave@SE Summerfield Way</STOP>
+		<TIME>2:07</TIME>
+		<LAT>45.42621</LAT>
+		<LNG>-122.51748</LNG>
+	</busstop>
+	<busstop>
+		<ID>3</ID>
+		<STOP>SE Vista Height St@SE 147th Ave</STOP>
+		<TIME>2:10</TIME>
+		<LAT>45.431828</LAT>
+		<LNG>-122.512502</LNG>
+	</busstop>
+	<busstop>
+		<ID>4</ID>
+		<STOP>SE Vista Height St@SE Natalya St</STOP>
+		<TIME>2:16</TIME>
+		<LAT>45.431825</LAT>
+		<LNG>-122.513964</LNG>
+	</busstop>
+	<busstop>
+		<ID>5</ID>
+		<STOP>SE Crown Vista Dr@SE Lyon Crest St</STOP>
+		<TIME>2:16</TIME>
+		<LAT>45.43083</LAT>
+		<LNG>-122.515784</LNG>
+	</busstop>
+	<busstop>
+		<ID>6</ID>
+		<STOP>SE Faris St@SE Hadeed St</STOP>
+		<TIME>2:17</TIME>
+		<LAT>45.430288</LAT>
+		<LNG>-122.513829</LNG>
+	</busstop>
+	<busstop>
+		<ID>7</ID>
+		<STOP>SE 147th Ave@SE Natalya St</STOP>
+		<TIME>2:19</TIME>
+		<LAT>45.443099</LAT>
+		<LNG>-122.51232</LNG>
+	</busstop>
+	<busstop>
+		<ID>8</ID>
+		<STOP>Academy 4 Kids on 147th</STOP>
+		<TIME>2:23</TIME>
+		<LAT>45.4233</LAT>
+		<LNG>-122.51215</LNG>
+	</busstop>
+	<busstop>
+		<ID>9</ID>
+		<STOP>SE 142nd Ave@Goddard School Daycare</STOP>
+		<TIME>2:24</TIME>
+		<LAT>45.424072</LAT>
+		<LNG>-122.517462</LNG>
+	</busstop>
+	<busstop>
+		<ID>10</ID>
+		<STOP>SE 139th Ave@SE Hampshire Ct</STOP>
+		<TIME>2:26</TIME>
+		<LAT>45.42753</LAT>
+		<LNG>-122.522061</LNG>
+	</busstop>
+	<busstop>
+		<ID>11</ID>
+		<STOP>13883 SE Hampshire Way</STOP>
+		<TIME>2:26</TIME>
+		<LAT>45.426995</LAT>
+		<LNG>-122.520727</LNG>
+	<busstop>
+		<ID>12</ID>
+		<STOP>13711 SE Sunnyside Rd</STOP>
+		<TIME>2:27</TIME>
+		<LAT>45.42586</LAT>
+		<LNG>-122.5222</LNG>
+	</busstop>
+	<busstop>
+		<ID>13</ID>
+		<STOP>SE 132nd@SE Normandy Dr</STOP>
+		<TIME>2:31</TIME>
+		<LAT>45.422777</LAT>
+		<LNG>-122.527814</LNG>
+	</busstop>
+	</busstop>
+</busstops>

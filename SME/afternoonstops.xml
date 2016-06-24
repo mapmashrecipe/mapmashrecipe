@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<busstops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<busstop>
+		<ID>1</ID>
+		<STOP>Arrive Spring Mountain E. S.</STOP>
+		<TIME>2:05</TIME>
+		<LAT>45.4372100004</LAT>
+		<LNG>-122.53482</LNG>
+	</busstop>
+	<busstop>
+		<ID>2</ID>
+		<STOP>SE Mountain Gate @ SE Evening Star Dr</STOP>
+		<TIME>2:08</TIME>
+		<LAT>45.4396599998</LAT>
+		<LNG>-122.53145</LNG>
+	</busstop>
+	<busstop>
+		<ID>3</ID>
+		<STOP>SE Rolling Meadow Dr @ SE Westchester Ave</STOP>
+		<TIME>2:10</TIME>
+		<LAT>45.4433199998</LAT>
+		<LNG>-122.52411</LNG>
+	</busstop>
+	<busstop>
+		<ID>4</ID>
+		<STOP>SE Rolling Meadow Dr @ SE Alexander Ave</STOP>
+		<TIME>2:11</TIME>
+		<LAT>45.4433199998</LAT>
+		<LNG>-122.52308</LNG>
+	</busstop>
+	<busstop>
+		<ID>5</ID>
+		<STOP>Happy Valley Elementary Daycare</STOP>
+		<TIME>2:14</TIME>
+		<LAT>45.4497399999</LAT>
+		<LNG>-122.514549999</LNG>
+	</busstop>
+	<busstop>
+		<ID>6</ID>
+		<STOP>SE Vista Height St @ SE Natalya St</STOP>
+		<TIME>2:21</TIME>
+		<LAT>45.4318253857</LAT>
+		<LNG>-122.513964207</LNG>
+	</busstop>
+	<busstop>
+		<ID>7</ID>
+		<STOP>SE Crown Vista Dr @ SE Lyon Crest St</STOP>
+		<TIME>2:22</TIME>
+		<LAT>45.4308295934</LAT>
+		<LNG>-122.515783579</LNG>
+	</busstop>
+	<busstop>
+		<ID>8</ID>
+		<STOP>SE 147th Ave @ SE Natalya St</STOP>
+		<TIME>2:24</TIME>
+		<LAT>45.4309900001</LAT>
+		<LNG>-122.51232</LNG>
+	</busstop>
+	<busstop>
+		<ID>9</ID>
+		<STOP>SE 142nd Ave @ SE Summerfield Way</STOP>
+		<TIME>2:28</TIME>
+		<LAT>45.4262100003</LAT>
+		<LNG>-122.51748</LNG>
+	</busstop>
+	<busstop>
+		<ID>10</ID>
+		<STOP>SE 142nd Ave @ SE Verlie St</STOP>
+		<TIME>2:30</TIME>
+		<LAT>45.42716</LAT>
+		<LNG>-122.517480001</LNG>
+	</busstop>
+	<busstop>
+		<ID>11</ID>
+		<STOP>12566 SE 122nd Ave @ Brick mailbox</STOP>
+		<TIME>2:34</TIME>
+		<LAT>45.4323686295</LAT>
+		<LNG>-122.538048965</LNG>
+	</busstop>
+</busstops>

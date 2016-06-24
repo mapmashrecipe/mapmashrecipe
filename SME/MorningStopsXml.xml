@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<busstops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<busstop>
+		<ID>1</ID>
+		<STOP>Happy Valley Emelemtary Daycare</STOP>
+		<TIME>6:53</TIME>
+		<LAT>45.4497399999</LAT>
+		<LNG>-122.514549999</LNG>
+	</busstop>
+	<busstop>
+		<ID>2</ID>
+		<STOP>SE Mountain Gate @ SE Evening Star Dr</STOP>
+		<TIME>6:59</TIME>
+		<LAT>45.4396599998</LAT>
+		<LNG>-122.53145</LNG>
+	</busstop>
+	<busstop>
+		<ID>3</ID>
+		<STOP>SE Rolling Meadow Dr @ SE Alexander Ave</STOP>
+		<TIME>7:02</TIME>
+		<LAT>45.4433199998</LAT>
+		<LNG>-122.52308</LNG>
+	</busstop>
+	<busstop>
+		<ID>4</ID>
+		<STOP>SE Vista Heights St @ SE Natalya St</STOP>
+		<TIME>7:08</TIME>
+		<LAT>45.4317479432</LAT>
+		<LNG>-122.513893699</LNG>
+	</busstop>
+	<busstop>
+		<ID>5</ID>
+		<STOP>SE Crown Vista Dr @ SE Lyon Crest St</STOP>
+		<TIME>7:10</TIME>
+		<LAT>45.4306849112</LAT>
+		<LNG>-122.515662413</LNG>
+	</busstop>
+	<busstop>
+		<ID>6</ID>
+		<STOP>SE 147th Ave @ SE Natalya St</STOP>
+		<TIME>7:11</TIME>
+		<LAT>45.4310413123</LAT>
+		<LNG>-122.512377299</LNG>
+	</busstop>
+	<busstop>
+		<ID>7</ID>
+		<STOP>Academy 4 Kids on 147th</STOP>
+		<TIME>7:16</TIME>
+		<LAT>45.4232999999</LAT>
+		<LNG>-122.51215</LNG>
+	</busstop>
+	<busstop>
+		<ID>8</ID>
+		<STOP>SE Summerfield Way @ SE 142nd Ave</STOP>
+		<TIME>7:17</TIME>
+		<LAT>45.4262100003</LAT>
+		<LNG>-122.51748</LNG>
+	</busstop>
+	<busstop>
+		<ID>9</ID>
+		<STOP>SE 142nd Ave @ SE Verlie St</STOP>
+		<TIME>7:19</TIME>
+		<LAT>45.42716</LAT>
+		<LNG>-122.517480001</LNG>
+	</busstop>
+	<busstop>
+		<ID>10</ID>
+		<STOP>13711 SE Sunnyside Rd</STOP>
+		<TIME>7:21</TIME>
+		<LAT>45.4258600002</LAT>
+		<LNG>-122.522199999</LNG>
+	</busstop>
+	<busstop>
+		<ID>11</ID>
+		<STOP>Arrive Spring Mountain E. S.</STOP>
+		<TIME>7:26</TIME>
+		<LAT>45.4372100004</LAT>
+		<LNG>-122.53482</LNG>
+	</busstop>
+</busstops>
