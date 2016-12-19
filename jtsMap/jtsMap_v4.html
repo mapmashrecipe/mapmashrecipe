@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7, IE=9, IE=10">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<link rel="stylesheet" href="css/l.geosearch.css" />
+    <style>
+	body{
+		padding:0px;
+		margin:0px;
+	}
+	#map{
+		width:100%;
+		height:100vh;
+		padding:0px;
+		margin:0px;
+	}
+	span.td{
+		font-weight:bold;
+		width:10px;
+		color:#666666;
+	}
+	#titleImage{
+		position:absolute;
+		display:block;
+		top:50%;
+		left:50%;
+		margin-right:-50%;
+		transform:translate(-50%, -50%);
+		box-shadow: 10px 10px 5px #888888;
+	}
+	.leaflet-popup-content-wrapper{
+		background-color:#d1d1ff;
+		font-family:Tahoma;
+	}
+	#searchIcon{
+		position: absolute;
+		left: 10px;
+		top: 82px;
+		width:32px;
+		height:34px;
+	}
+	#searchIcon.btn{
+		padding:0px;
+	}
+	#leaflet-control-geosearch-qry{
+		position: absolute;
+		background-color:white;
+		width:200px;
+		font-size:12px;
+	}
+	.leaflet-control-geosearch{
+		width:200px;
+		padding:0px;
+		left:40px;
+		top:0px;
+	}
+	.leaflet-right .leaflet-control {
+		width: 250px;
+	}
+	#stopListG{
+		display:none;
+		position:absolute;
+		top:120px;
+		left:50px;
+		max-height:400px;
+		width:200px;
+	}
+	#stopList{
+		width:200px;
+		max-height:400px;
+		font-size:12px;
+		padding:1px;
+		font-family:Arial;
+		color: #808080;
+		height:28px;
+	}
+    </style>
+</head>
+<body>
+    <div id="map"></div>    
+	<button id="searchIcon" class="btn btn-default" type="button" onclick="searchOpen();" data-toggle="tooltip" data-placement="bottom" title="Find stops within 500 ft."><img src="images/glyphicons-28-search_16.png" alt="search"/></button>  
+	<div id="stopListG"></div>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="js/l.control.geosearch.js"></script>
+	<script src="js/l.geosearch.provider.google.js"></script>
+    <script type="text/javascript">
+var map
+var stopListHtml;
+var jtsMarker;
+var jtsMarkersList = [];
+		
+$(document).ready(function () {
+	map = L.map('map').setView([31.505, -0.09], 3);
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a>',
+		maxZoom: 18
+	}).addTo(map);
+	
+	var p = L.icon({
+        iconUrl: "images/blue16.png",
+        iconSize: [12, 12],
+        iconAnchor: [6, 6]
+    });
+	
+	var pHL = L.icon({
+        iconUrl: "images/blue16.png",
+        iconSize: [18, 18],
+        iconAnchor: [9, 9]
+    });
+		
+	var pPlane = L.icon({
+        iconUrl: "images/plane1.png",
+        iconSize: [54, 54],
+        iconAnchor: [27, 27]
+    });	
+			
+	stopListHtml = "<label for='stopList' class='select' style='height:0px;font-size:0px;'></label><select name='stopList' id='stopList' data-mini='true' onchange='changeOpt(value);'><option value='0'>Or choose a city</option>";
+	
+	var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();	
+	var todayDate = mm + "/" + dd;
+	
+	var jtsPts = $.getJSON("json/jts090416.geojson", function (d){
+		L.geoJson(d, {
+		
+			pointToLayer: function (feature, latlng){
+			
+				if(feature.properties.Date.toString() == todayDate) jtsMarker = L.marker(latlng, {icon: pPlane});
+				else jtsMarker = L.marker(latlng, {icon: p});
+			
+				//return L.marker(latlng, {icon: p});
+				//jtsMarker = L.marker(latlng, {icon: p});
+				
+				jtsMarker.on('mouseover', function(e){
+				    p.options.iconSize = [36, 36];
+					//this.setIcon(pHL);
+					this.openPopup();
+				});
+				jtsMarker.on('mouseout', function(e){
+				    p.options.iconSize = [18, 18];
+					//this.setIcon(p);
+					this.closePopup();
+				});
+				jtsMarkersList.push(jtsMarker);
+				return jtsMarker;
+			},
+			
+			onEachFeature: function (feature, layer) {
+				var lng = feature.geometry.coordinates[0];
+				var lat = feature.geometry.coordinates[1];
+				layer.bindPopup("<span class='th' style='color:#666666;width:50px;'>No</span>:" + feature.properties.NO 
+				+ "<br/><span class='th' style='color:#666666;'>Date</span>: " + feature.properties.Date 
+				+ "<br/><span class='th' style='color:#666666;'>City</span>: " + feature.properties.City
+				+ "<br/><iframe src='basic.html?lat=" + lat + "&lng=" + lng + "'></iframe>");
+			}
+		}).addTo(map);
+		
+		for(var i=0;i<d.features.length;i++){
+			stopListHtml += "<option value='" + d.features[i].properties.NO + "'>" + d.features[i].properties.NO + ". " + d.features[i].properties.City + "</option>";
+			//console.log(stopListHtml);
+			//console.log(d.features[i].properties.City);
+		}
+		stopListHtml += "</select>";
+		$("#stopListG").html(stopListHtml);
+		
+		
+	});
+
+	var jtsLine = $.getJSON("json/jtsLine090516.geojson", function (d){
+			//return d;		
+		L.geoJson(d, {}).addTo(map);
+	});
+	
+	(new L.Control.GeoSearch({
+        provider: new L.GeoSearch.Provider.Google,
+        position: "bottomleft",
+        showMarker: false
+    })).addTo(map);
+
+    $("#leaflet-control-geosearch-qry").attr("placeholder", "Type an address");
+    $("#leaflet-control-geosearch-qry").hide();
+    $("#leaflet-control-geosearch-qry").css("padding", "0px");
+	$(".leaflet-bottom.leaflet-left").css("bottom", "");
+	$(".leaflet-bottom.leaflet-left").css("top", "78px");	
+	
+
+});
+
+	
+function searchOpen(){
+	$("#leaflet-control-geosearch-qry").toggle();
+	//$("#leaflet-control-geosearch-qry").css("padding", "10px");
+	$("#stopListG").toggle();
+}
+
+function changeOpt(v){
+	//alert(v);
+	$.getJSON("json/jts090416.geojson", function (d){
+		for(var i=0;i<d.features.length;i++){
+			if (v === d.features[i].properties.NO){
+				var location = d.features[i].geometry.coordinates;
+				var lat = location[0];
+				var lng = location[1];
+				console.log(location);
+				map.setView([lng, lat], 10);
+				jtsMarkersList[v-1].openPopup();
+			}
+			//console.log(stopListHtml);
+			//console.log(d.features[i].properties.City);
+		}
+	});
+}
+
+    </script>
+</body>
+</html>

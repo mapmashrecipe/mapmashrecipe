@@ -1,0 +1,53 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Street View</title>    
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<link rel="stylesheet" type="text/css" href="layout.css">
+    <script type="text/javascript">
+    	function gup( name ){  
+	      name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");  
+	      var regexS = "[\\?&]"+name+"=([^&#]*)";  
+	      var regex = new RegExp( regexS );  
+	      var results = regex.exec( window.location.href );  
+	      if( results == null )    
+	        return "";  
+	      else    
+	        return results[1];
+	    }
+    
+	    function initialize() {
+	      lat = gup('lat');
+      	  lng = gup('lng');
+      	  
+      	  var newPosition = new google.maps.LatLng(lat, lng);
+      	  var panoramaOptions = {
+      	  	position: newPosition,
+      	  	pov: {
+      	  		heading:165,
+      	  		pitch:0,
+      	  		zoom:1
+      	  	},
+      	  	linksControl: false,
+      	  	panControl: true,
+      	  	ZoomControlOptions:{
+      	  	  style:google.maps.ZoomControlStyle.SMALL
+      	  	},
+      	  	enableCloseButton:false
+      	  };
+      	  var myPano = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
+		  myPano.setVisibile(true);      
+
+	    }
+  </script>
+  </head>
+  <body onload="initialize();window.focus();">
+    	<div name="pano" id="pano" style="width: 600px; height: 400px;"></div>
+    	<div id="footer" style="height:20px;">
+    		If no image appears StreetView is not available
+    	</div>
+  </body>
+</html>
